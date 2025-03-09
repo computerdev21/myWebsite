@@ -12,35 +12,33 @@ export const SideMainPanel: React.FC<ISideMainPanel> = (props: any) => {
   const [selectedSideTab, setselectedSideTab] = useState("main");
 
   return (
-    <div className="side-header text-center">
-      <ul className="side-header-menu text-center relative h-full ">
-        <li
-          className={`${
-            props.mainActiveSideButton && selectedSideTab === "main"
-              ? "active"
-              : ""
-          } ${styles.faicons}`}
-          title="Sidebar"
-          onClick={() => {
-            props.toggleSideMainMenu();
-            setselectedSideTab("main");
-          }}
-        >
-          <Copyicon width={25} height={25} />
-        </li>
-
-        <Link href="/">
+      <div className="side-header text-center">
+        <ul className="side-header-menu text-center relative h-full">
           <li
-            className={`${styles.faicons}  `}
-            style={{ position: "absolute", bottom: "0" }}
-            title="About"
+              className={`${
+                  props.mainActiveSideButton && selectedSideTab === "main"
+                      ? "active"
+                      : ""
+              } ${styles.faicons}`}
+              title="Sidebar"
+              onClick={() => {
+                props.toggleSideMainMenu();
+                setselectedSideTab("main");
+              }}
           >
-            <div className={`cursor-pointer`} title="About">
-              <AvatarIcon width={30} height={30} />
-            </div>
+            <Copyicon width={25} height={25} />
           </li>
-        </Link>
-      </ul>
-    </div>
+
+          <li
+              className={`${styles.faicons}`}
+              style={{ position: "absolute", bottom: "0" }}
+              title="About"
+          >
+            <Link href="/" className="cursor-pointer" title="About">
+              <AvatarIcon width={30} height={30} />
+            </Link>
+          </li>
+        </ul>
+      </div>
   );
 };
