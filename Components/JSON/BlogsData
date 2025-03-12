@@ -1,3 +1,6 @@
+// @ts-ignore
+
+/*
 export const blogsdata = () => [
   {
     image:
@@ -92,3 +95,4 @@ export const blogsdata = () => [
     tag: "Clean Architecture",
   },
 ];
+*/
