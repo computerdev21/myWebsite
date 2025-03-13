@@ -70,32 +70,36 @@ const AnimeComponent: React.FC = () => {
                 </h2>
               </div>
               <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-6">
-                {animedata()?.map((anime) => (
-                    <div
-                        key={anime.title}
-                        className="w-full bg-red-900 backdrop-filter backdrop-blur-sm bg-opacity-20 rounded-lg shadow-lg p-12 flex flex-col justify-center items-center"
-                    >
-                      <div className="mb-8">
-                        <Image
-                            className="object-center object-cover rounded-full"
-                            src={anime.img}
-                            alt={anime.title}
-                            width={144}
-                            height={144}
-                        />
+                {animedata()?.map((anime, idx) => {
+                  const title = anime.title || anime.name || `Anime-${idx}`;
+                  const image = anime.img || anime.gif;
+
+                  return (
+                      <div
+                          key={title}
+                          className="w-full bg-red-900 backdrop-filter backdrop-blur-sm bg-opacity-20 rounded-lg shadow-lg p-12 flex flex-col justify-center items-center"
+                      >
+                        <div className="mb-8">
+                          <Image
+                              className="object-center object-cover rounded-full"
+                              src={image}
+                              alt={title}
+                              width={144}
+                              height={144}
+                          />
+                        </div>
+                        <div className="text-center">
+                          <p className="text-xl text-white font-bold mb-2">{title}</p>
+                          {isTabletOrMobile && (
+                              <p className="text-base text-gray-100 font-normal">
+                                {anime.subtitle}
+                              </p>
+                          )}
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <p className="text-xl text-white font-bold mb-2">
-                          {anime.title}
-                        </p>
-                        {isTabletOrMobile && (
-                            <p className="text-base text-gray-100 font-normal">
-                              {anime.subtitle}
-                            </p>
-                        )}
-                      </div>
-                    </div>
-                ))}
+                  );
+                })}
+
               </div>
             </section>
           </div>
