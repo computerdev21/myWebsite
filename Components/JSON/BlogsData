@@ -1,12 +1,10 @@
-// @ts-ignore
-
 /*
 export const blogsdata = () => [
   {
     image:
       "https://ayex8storex9.s3.ap-south-1.amazonaws.com/50/b7218890-a053-11eb-bae0-272850e20d51GreenandBlackGamingYouTubeChannelArt35.jpg",
     title: "Best GitHub Repositories for Computer Science People.",
-    link: "https://ayedot.com/124/MiniBlog/Best-GitHub-Repositories-for-Computer-Science-People",
+    link: "isMobile/124/MiniBlog/Best-GitHub-Repositories-for-Computer-Science-People",
     tag: "GitHub",
   },
   {
@@ -14,14 +12,14 @@ export const blogsdata = () => [
       "https://ayex8storex9.s3.ap-south-1.amazonaws.com/40/5507a250-6bad-11eb-b1c5-1331b5f7f026Youallhavemayormaynotheardaboutthisterm_ATS_Reume,butletmetellyousomething-Ifyouareapplyingforajobinbigcompanies,wheretherearelotofapplicationforasinglejobpost,thenther.jpg",
     title:
       "Meaning of ATS compliant resume and How to create ATS Resume for Free",
-    link: "https://ayedot.com/97/MiniBlog/Meaning-of-ATS-compliant-resume-and-How-to-create-ATS-Resume-for-Free",
+    link: "isMobile/97/MiniBlog/Meaning-of-ATS-compliant-resume-and-How-to-create-ATS-Resume-for-Free",
     tag: "ATS Resume",
   },
   {
     image:
       "https://ayex8storex9.s3.ap-south-1.amazonaws.com/40/3313b4d0-e7d2-11eb-b3f6-5ff7f691d9adGreenandBlackGamingYouTubeChannelArt40.jpg",
     title: "Get Free SSL Certificate for your Website for lifetime",
-    link: "https://ayedot.com/203/MiniBlog/Get-Free-SSL-Certificate-for-your-Website-for-lifetime",
+    link: "isMobile/203/MiniBlog/Get-Free-SSL-Certificate-for-your-Website-for-lifetime",
     tag: "SSL Certificates",
   },
   {
@@ -43,14 +41,14 @@ export const blogsdata = () => [
       "https://ayex8storex9.s3.ap-south-1.amazonaws.com/15/65e32da0-c6cb-11eb-bae0-272850e20d51GreenandBlackGamingYouTubeChannelArt43.jpg",
     title:
       "Cool Visual Studio Code Extensions you should try for better and faster Development",
-    link: "https://ayedot.com/154/MiniBlog/Best-and-Cool-Visual-Studio-Code-Extensions-you-should-try-for-better-and-faster-Development",
+    link: "isMobile/154/MiniBlog/Best-and-Cool-Visual-Studio-Code-Extensions-you-should-try-for-better-and-faster-Development",
     tag: "Visual Studio Code",
   },
   {
     image:
       "https://ayex8storex9.s3.ap-south-1.amazonaws.com/15/511a44f0-91e0-11eb-87c4-d3dba375d3d6GreenandBlackGamingYouTubeChannelArt25.jpg",
     title: "How to choose between React Native and Flutter?",
-    link: "https://ayedot.com/113/MiniBlog/How-to-choose-between-React-Native-and-Flutter",
+    link: "isMobile/113/MiniBlog/How-to-choose-between-React-Native-and-Flutter",
     tag: "Native Apps",
   },
   {
@@ -64,14 +62,14 @@ export const blogsdata = () => [
     image:
       "https://ayex8storex9.s3.ap-south-1.amazonaws.com/40/d4b6bdf0-18a1-11ec-86b6-b17ee14d46b3BlueandWhiteModernVideographicMusicYouTubeChannelArt1.jpg",
     title: "10 Most Helpful websites for every web developer.",
-    link: "https://ayedot.com/305/MiniBlog/10-Coolest-Websites-that-every-web-developer-must-know-about",
+    link: "isMobile/305/MiniBlog/10-Coolest-Websites-that-every-web-developer-must-know-about",
     tag: "Web Development",
   },
   {
     image:
       "https://ayex8storex9.s3.ap-south-1.amazonaws.com/50/b00a8f70-09b7-11ec-86b6-b17ee14d46b3BlueBois1.jpg",
     title: "Important 5 Difference between React and Angular",
-    link: "https://ayedot.com/305/MiniBlog/10-Coolest-Websites-that-every-web-developer-must-know-about",
+    link: "isMobile/305/MiniBlog/10-Coolest-Websites-that-every-web-developer-must-know-about",
     tag: "React",
   },
   {
