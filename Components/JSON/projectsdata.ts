@@ -2,8 +2,8 @@ export const projectsdata = () => [
   {
     name: "Resumode",
     title: "AI-Powered Resume Assistant",
-    banner: "/projects/resumode-banner.png",
-    logo: "/projects/resumode-logo.png",
+    banner: "/resumodeBanner.png",
+    logo: "/bot.svg",
     tech: ["Next.js", "OpenAI", "Drizzle ORM", "Neon DB", "TypeScript"],
     link: "https://resumode.vercel.app/",
     github: "https://github.com/computerdev21/resume-ai-chatbot",
@@ -18,8 +18,8 @@ export const projectsdata = () => [
   {
     name: "Resum8Backend",
     title: "Backend Server Setup for Resumode",
-    banner: "/projects/resum8backend-banner.png",
-    logo: "/projects/resum8backend-logo.png",
+    banner: "/backend.png",
+    logo: "/server.png",
     tech: ["Node.js", "Express", "MongoDB", "JWT"],
     github: "https://github.com/computerdev21/Resum8Backend",
     link: "https://github.com/computerdev21/Resum8Backend",
@@ -33,8 +33,8 @@ export const projectsdata = () => [
   {
     name: "AI BTC Bot",
     title: "AI-Powered Cryptocurrency Trading Tool",
-    banner: "/projects/ai-btc-banner.png",
-    logo: "/projects/ai-btc-logo.png",
+    banner: "/aibtc.png",
+    logo: "/bot.svg",
     tech: ["Python", "TensorFlow", "CCXT", "Node.js"],
     github: "https://github.com/computerdev21/btcaiTest",
     description: `An AI trading tool that analyzes market data to provide cryptocurrency trading suggestions.`,
@@ -47,8 +47,8 @@ export const projectsdata = () => [
   {
     name: "UniSwap Swapper",
     title: "Crypto Volume Enhancer Bot",
-    banner: "/projects/uniswap-swapper-banner.png",
-    logo: "/projects/uniswap-swapper-logo.png",
+    banner: "/uniswap.png",
+    logo: "/narfex.png",
     tech: ["Solidity", "Ethers.js", "Uniswap V3", "Node.js"],
     github: "https://github.com/computerdev21/UniSwapSwapper",
     description: `A bot that performs automated token swaps on Uniswap to increase trading volume and liquidity visibility.`,
@@ -61,8 +61,8 @@ export const projectsdata = () => [
   {
     name: "EdBucks",
     title: "Blockchain-based Crowdfunding Platform",
-    banner: "/projects/edbucks-banner.png",
-    logo: "/projects/edbucks-logo.png",
+    banner: "/Edbucks.png",
+    logo: "/edbuckslogo.png",
     tech: ["Avalanche", "Solidity", "Hardhat", "Next.js", "Tailwind"],
     github: "https://github.com/BhartiyaYeti/FrostiYeti-V2",
     description: `A decentralized funding solution for research and education built on Avalanche.`,
@@ -75,8 +75,8 @@ export const projectsdata = () => [
   {
     name: "Blockchain Automation Bot",
     title: "High Frequency P2P Token Volume Enhancer",
-    banner: "/projects/bot-banner.png",
-    logo: "/projects/bot-logo.png",
+    banner: "/nobanner.png",
+    logo: "/bot.svg",
     tech: ["Node.js", "Ethers.js", "Uniswap V3", "MongoDB"],
     description: `Automated peer-to-peer swaps on Base/Ethereum to simulate liquidity and boost volume.`,
     highlights: [
@@ -88,8 +88,8 @@ export const projectsdata = () => [
   {
     name: "Merc Rides",
     title: "Android Booking App for Boat Test Rides",
-    banner: "/projects/merc-banner.png",
-    logo: "/projects/merc-logo.png",
+    banner: "/nobanner.png",
+    logo: "/bot.svg",
     tech: ["Android", "Spring Boot", "Firebase", "Twilio", "Heroku"],
     description: `Users could pre-book test rides at global boating expos with real-time slot availability.`,
     highlights: [
@@ -101,8 +101,8 @@ export const projectsdata = () => [
   {
     name: "FEOOH Dashboard",
     title: "Ad Template Builder + Payment Integration",
-    banner: "/projects/feoh-banner.png",
-    logo: "/projects/feoh-logo.png",
+    banner: "/nobanner.png",
+    logo: "/feooh.png",
     tech: ["Laravel", "Vue.js", "Inertia.js", "Java"],
     description: `Built an internal platform to streamline ad template creation and monitor payments.`,
     highlights: [
@@ -114,8 +114,8 @@ export const projectsdata = () => [
   {
     name: "PACTREON Workflows",
     title: "Campaign Automation & Monitoring",
-    banner: "/projects/pactreon-banner.png",
-    logo: "/projects/pactreon-logo.png",
+    banner: "/nobanner.png",
+    logo: "/pactreon.png",
     tech: ["React.js", "Node.js", "Jenkins", "Docker"],
     description: `Optimized internal workflows for PPC campaigns and marketing automation.`,
     highlights: [
