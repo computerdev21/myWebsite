@@ -139,7 +139,6 @@ export const SideSecondPanel: React.FC<IProps> = ({ closeSideMenu }) => {
                 <div className="show-pre">
                   <ul>
                     {renderLink("/Hobbies", "Hobbies", "icons8-cplusplus")}
-                    {renderLink("/Blogs", "Blogs", "icons8-typescript")}
                     {renderLink("/Gaming", "Gaming", "icons8-c-sharp")}
                     {renderLink("/Anime", "Anime", "icons8-react")}
                     {renderLink("/Learning", "Learning", "icons8-angularjs")}
