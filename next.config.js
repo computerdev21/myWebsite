@@ -24,6 +24,13 @@ module.exports = {
             "pbs.twimg.com",
             "i.pinimg.com",
             "media4.giphy.com",
+            "img.icons8.com",
+            "steamuserimages-a.akamaihd.net",
+            "c.tenor.com",
+            "thumbs.gfycat.com",
+            "giffiles.alphacoders.com",
+            "j.gifs.com",
+            "i.pinimg.com",
             "i.makeagif.com",
             "i.ibb.co",
             "bourhaouta.gallerycdn.vsassets.io",
@@ -31,7 +38,11 @@ module.exports = {
             "encrypted-tbn0.gstatic.com",
             "cdn.worldvectorlogo.com",
             "groq.com",
-            "numpy.org"
+            "numpy.org",
+            "media2.giphy.com",
+            "media1.giphy.com",
+            "media3.giphy.com",
+            "media4.giphy.com"
         ],
     },
 };
