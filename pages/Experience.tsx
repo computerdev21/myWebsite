@@ -19,7 +19,7 @@ const MyWork: NextPage = () => {
       location: "Toronto, ON",
       role: "Full Stack Blockchain Developer",
       date: "June 2024 – Present",
-      image: "/nevo.png",
+      image: "/narfex.png",
       points: [
         "Led the development of a decentralized exchange on Binance Smart Chain with secure smart contracts and account abstraction.",
         "Managed scalable AWS infrastructure using Kubernetes, Docker, and automation tools.",
@@ -107,6 +107,32 @@ const MyWork: NextPage = () => {
       ],
       techStack: "HTML, JavaScript, AWS, Azure, Email Templates",
     },
+    {
+      company: "AISEC",
+      location: "Delhi, IN",
+      role: "OGE Team Lead",
+      date: "Feb 2019 – May 2020",
+      image: "/aiesec.png",
+      points: [
+        "Led digital campaigns and email marketing targeting international student participation.",
+        "Developed promotional web pages and tracked analytics for engagement insights.",
+        "Collaborated on community-building events and outreach strategy.",
+      ],
+      techStack: "Canva, Google Analytics, Email Marketing Tools, WordPress",
+    },
+    {
+      company: "ENACTUS ADGITM",
+      location: "Delhi, IN",
+      role: "Web Developer/Vice President",
+      date: "Jan 2019 – April 2022",
+      image: "/enactus.png",
+      points: [
+        "Built a project landing page for a sustainable student initiative on energy equity.",
+        "Worked closely with design and project leads to iterate over MVP functionalities.",
+        "Integrated data dashboards and embedded forms for user participation tracking.",
+      ],
+      techStack: "React, Firebase, Google Forms, Data Studio",
+    }
   ];
 
 
