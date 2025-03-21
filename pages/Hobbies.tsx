@@ -7,11 +7,6 @@ import Image from "next/image";
 
 const hobbies = [
   {
-    name: "Blogging",
-    href: "/Blogs",
-    img: "https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-blogging-free-time-wanicon-lineal-color-wanicon.png",
-  },
-  {
     name: "Gaming",
     href: "/Gaming",
     img: "https://img.icons8.com/ios/50/000000/controller.png",
