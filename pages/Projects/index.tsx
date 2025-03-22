@@ -65,7 +65,7 @@ const Projects: NextPage = (props: any) => {
                                             <div className="pr-3 pl-3">
                                                 <Image
                                                     className="rounded-xl"
-                                                    src={index === 0 ? "" : obj.banner}
+                                                    src={index === 0 ? "/resumodeBanner.png" : obj.banner}
                                                     alt="Just Chill Man"
                                                     width="500"
                                                     height="270"
