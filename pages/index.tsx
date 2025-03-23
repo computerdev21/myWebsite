@@ -28,7 +28,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Dev Chetal | Full Stack Blockchain Developer</title>
+        <title>Dev Chetal | Full Stack Blockchain AI Developer</title>
         <meta
           name="description"
           content={`VS code style developer portfolio`}
@@ -147,25 +147,6 @@ const Home: NextPage = () => {
                 </Link>
 
 
-                <p className="text-xl text-gray-300 pt-6 mb-2 ">Recent</p>
-                {recentLinks?.length < 1 ? (
-                  <p className="text-sm font-sans pt-1	 text-gray-500">
-                    No recent activity!
-                  </p>
-                ) : (
-                  <div className="pt-1">
-                    {recentLinks?.map((item: any, index: number) => (
-                      <Link passHref href={item} key={`link-recent-${index}`}>
-                        <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center">
-                          {item?.slice(1)}{" "}
-                          <p className="text-gray-300 pl-2 text-sm ">
-                            E:/DevChetal{item}
-                          </p>
-                        </p>
-                      </Link>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
             <div className=" flex-1">
@@ -242,10 +223,9 @@ const Home: NextPage = () => {
                       borderBottomWidth: "0.3rem",
                     }}
                   >
-                    <Image width="30" height="30" src="https://img.icons8.com/color/28/null/javascript--v1.png"  alt=""/>{" "}
-                    <Image  className="h-[30px]" width="30" height="30" src="https://img.icons8.com/external-ddara-lineal-ddara/64/external-blockchain-non-fungible-token-ddara-lineal-ddara.png"  alt=""/>{" "}
+                    <Image width="30" height="30" src="./bot.svg"  alt=""/>{" "}
                     <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
-                      Full Stack Blockchain Engineer
+                      Full Stack Blockchain AI Engineer
                     </p>
                   </div>
                 </div>
@@ -260,7 +240,7 @@ const Home: NextPage = () => {
                   >
                     <Image
                       src="https://img.icons8.com/ios-filled/20/ffffff/learn-more.png"
-                      className="ml-1 mr-1" width="30" height="30"
+                      className="ml-1 mr-1" width="25" height="25"
                      alt=""/>{" "}
                     <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
                       Constant Learner
