@@ -16,6 +16,37 @@ export const projectsdata = () => [
     ]
   },
   {
+    name: "LMOS",
+    title: "Lightweight Microkernel Operating System",
+    banner: "/nobanner.png",
+    logo: "/bot.svg",
+    tech: ["C", "Assembly", "x86", "GCC", "QEMU"],
+    github: "https://github.com/computerdev21/LMOS",
+    description: `LMOS is a lightweight microkernel operating system built from scratch, featuring modular architecture and efficient resource management.`,
+    highlights: [
+      "Implemented microkernel architecture with user-space drivers",
+      "Built memory management system with paging and virtual memory",
+      "Developed process scheduler with priority-based multitasking",
+      "Created system call interface and inter-process communication"
+    ]
+  },
+  {
+    name: "PrepWise AI",
+    title: "AI-Powered Mock Interview Platform",
+    banner: "/nobanner.png",
+    logo: "/bot.svg",
+    tech: ["Python", "FastAPI", "Flask", "OpenAI Whisper", "TensorFlow", "MediaPipe", "Docker"],
+    github: "https://github.com/computerdev21/PrepWise",
+    description: `PrepWise is an intelligent mock interview platform that provides real-time feedback on speech patterns, body language, and overall interview performance using advanced AI models.`,
+    highlights: [
+      "Real-time speech analysis using OpenAI Whisper for transcription",
+      "Custom LSTM model for posture and expression analysis",
+      "AI-powered feedback generation using Google Gemini",
+      "Interactive interview experience with dynamic questions",
+      "Docker support for easy deployment and scalability"
+    ]
+  },
+  {
     name: "Resum8Backend",
     title: "Backend Server Setup for Resumode",
     banner: "/backend.png",

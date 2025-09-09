@@ -40,3 +40,38 @@
   position: absolute;
   display: inline-flex;
 }
+
+@media only screen and (max-width: 768px) {
+  .navside {
+    width: 100vw;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  
+  .mainside {
+    width: 100vw;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+    display: block;
+    position: relative;
+  }
+  
+  .navsidecollapse {
+    width: 100vw;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  
+  .mainsidecollapse {
+    width: 100vw;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+    left: 0;
+    position: relative;
+    display: block;
+  }
+}

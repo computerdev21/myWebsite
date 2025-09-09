@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 const Home: NextPage = () => {
   const [index, setIndex] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
   const router = useRouter();
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
+    setIsLoaded(true);
     return () => clearTimeout(intervalId);
   }, []);
 
@@ -62,15 +64,15 @@ const Home: NextPage = () => {
         <div className="container vscodecontainer mx-auto max-w-5xl w-full p-6 mb:p-12">
           <div className="flex flex-col mt-1 md:flex-row md:space-x-4">
             <div className="flex-1 mb-4 md:mb-0 ">
-              <div className="p-2">
-                <h2 className="text-5xl font-sans	 mb-2 ">Dev Chetal</h2>
-                <h3 className="text-2xl font-sans	 text-gray-500 pt-1 mb-2">
+              <div className={`p-2 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <h2 className="text-5xl font-sans mb-2 animate-fade-in-up">Dev Chetal</h2>
+                <h3 className="text-2xl font-sans text-gray-500 pt-1 mb-2 animate-fade-in-up animation-delay-200">
                   Full Stack Blockchain Developer
                 </h3>
 
-                <p className="text-xl text-gray-300 pt-5 mb-4">Start</p>
+                <p className="text-xl text-gray-300 pt-5 mb-4 animate-fade-in-up animation-delay-400">Start</p>
                 <Link passHref href="/Skills">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center">
+                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -89,7 +91,7 @@ const Home: NextPage = () => {
                   </p>
                 </Link>
                 <Link passHref href="/Projects">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center">
+                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-800">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -108,7 +110,7 @@ const Home: NextPage = () => {
                   </p>
                 </Link>
                 <Link passHref href="/Email">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center">
+                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-1000">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -127,7 +129,7 @@ const Home: NextPage = () => {
                   </p>
                 </Link>
                 <Link passHref href="/Hobbies">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center">
+                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-1200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -151,10 +153,10 @@ const Home: NextPage = () => {
             </div>
             <div className=" flex-1">
               <div
-                className="p-2 "
+                className={`p-2 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
                 style={{ paddingTop: isTabletOrMobile ? "5%" : "22%" }}
               >
-                <p className="text-xl text-gray-300 pt-6 mb-1 ">About</p>
+                <p className="text-xl text-gray-300 pt-6 mb-1 animate-fade-in-up animation-delay-400">About</p>
                 <div className="pt-1">
                   <Link
                     passHref
@@ -163,7 +165,7 @@ const Home: NextPage = () => {
                   >
                     <div
                       className="cursor-pointer w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b  border-blue-500 "
+                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
                       style={{
                         backgroundColor: "#262626",
                         borderBottomWidth: "0.3rem",
@@ -180,7 +182,7 @@ const Home: NextPage = () => {
                   <Link passHref target="_blank" href="https://github.com/computerdev21">
                     <div
                       className="cursor-pointer w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b  border-blue-500 "
+                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-800"
                       style={{
                         backgroundColor: "#262626",
                         borderBottomWidth: "0.3rem",
@@ -201,7 +203,7 @@ const Home: NextPage = () => {
                   >
                     <div
                       className="cursor-pointer w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b  border-blue-500 "
+                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1000"
                       style={{
                         backgroundColor: "#262626",
                         borderBottomWidth: "0.3rem",
@@ -217,7 +219,7 @@ const Home: NextPage = () => {
                 <div className="mt-4">
                   <div
                     className="w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b  border-blue-500 "
+                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1200"
                     style={{
                       backgroundColor: "#262626",
                       borderBottomWidth: "0.3rem",
@@ -232,7 +234,7 @@ const Home: NextPage = () => {
                 <div className="mt-4">
                   <div
                     className="w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b  border-blue-500 "
+                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1400"
                     style={{
                       backgroundColor: "#262626",
                       borderBottomWidth: "0.3rem",
@@ -250,7 +252,7 @@ const Home: NextPage = () => {
                 <div className="mt-4">
                   <div
                     className="w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b  border-blue-500 "
+                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1600"
                     style={{
                       backgroundColor: "#262626",
                       borderBottomWidth: "0.3rem",

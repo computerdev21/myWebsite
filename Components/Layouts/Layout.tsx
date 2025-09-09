@@ -8,7 +8,7 @@ import Image from "next/image";
 import Clock from "react-live-clock";
 
 const Layout: React.FC = ({ children }: any) => {
-  const [openSideMenu, setOpenSideMenu] = useState(false);
+  const [openSideMenu, setOpenSideMenu] = useState(true);
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
 

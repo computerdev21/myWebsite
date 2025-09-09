@@ -29,6 +29,20 @@ const MyWork: NextPage = () => {
           "Solidity, JavaScript, Node.js, React, Kubernetes, AWS, Docker, ABI, REST APIs",
     },
     {
+      company: "Linamar Corporation",
+      location: "CA",
+      role: "Machine Learning Programmer Coop",
+      date: "January 2024 – May 2024",
+      image: "/narfex.png",
+      points: [
+        "Developing machine learning models for automotive manufacturing optimization",
+        "Implementing predictive analytics for quality control and production efficiency",
+        "Working with computer vision systems for automated inspection processes",
+      ],
+      techStack:
+          "Python, TensorFlow, PyTorch, Scikit-learn, OpenCV, Pandas, NumPy, Jupyter, Docker, AWS",
+    },
+    {
       company: "FEOOH",
       location: "Mississauga, ON",
       role: "Full Stack Developer",
