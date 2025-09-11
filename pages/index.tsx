@@ -11,6 +11,7 @@ const Home: NextPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
   const router = useRouter();
+  const linktreeUrl = "https://linktr.ee/devchetal";
 
   const recentLinks = useMemo(() => {
     if (typeof window !== "undefined") {
@@ -258,12 +259,21 @@ const Home: NextPage = () => {
                       borderBottomWidth: "0.3rem",
                     }}
                   >
-                    <Image width="30" height="30" src="https://img.icons8.com/external-victoruler-flat-victoruler/26/null/external-farming-farming-victoruler-flat-victoruler.png"  alt=""/>
-                    <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
-                      Retirement Plan Farming
-                    </p>
-                  </div>
+                  <Image width="30" height="30" src="https://img.icons8.com/external-victoruler-flat-victoruler/26/null/external-farming-farming-victoruler-flat-victoruler.png"  alt=""/>
+                  <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
+                    Retirement Plan Farming
+                  </p>
                 </div>
+                {isTabletOrMobile && (
+                  <div className="mt-6 flex justify-center">
+                    <a href={linktreeUrl} target="_blank" rel="noreferrer">
+                      <img
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(linktreeUrl)}`}
+                        alt="QR code to my socials"
+                      />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

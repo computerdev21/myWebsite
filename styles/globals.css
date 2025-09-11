@@ -201,6 +201,29 @@ ul.header-menu li.header-menu-link {
   color: #ccc;
 }
 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  ul.header-menu {
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding: 4px 0;
+  }
+
+  ul.header-menu li.header-menu-link {
+    margin: 2px 4px;
+  }
+
+  .header-app-icons {
+    position: static;
+    margin-top: 4px;
+  }
+}
+
 .side-header {
   background: #333;
   position: absolute;
