@@ -61,181 +61,173 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="twitter:widgets:csp" content="on" />
       </Head>
-      <main className="w-full  containerCenterImage">
-        <div className="container vscodecontainer mx-auto max-w-5xl w-full p-6 mb:p-12">
-          <div className="flex flex-col mt-1 md:flex-row md:space-x-4">
-            <div className="flex-1 mb-4 md:mb-0 ">
+      <main className="w-full containerCenterImage">
+        <div className="container vscodecontainer mx-auto max-w-5xl w-full p-4 md:p-6 lg:p-12">
+          <div className="flex flex-col lg:flex-row lg:space-x-4">
+            <div className="flex-1 mb-6 lg:mb-0">
               <div className={`p-2 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-5xl font-sans mb-2 animate-fade-in-up">Dev Chetal</h2>
-                <h3 className="text-2xl font-sans text-gray-500 pt-1 mb-2 animate-fade-in-up animation-delay-200">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans mb-2 animate-fade-in-up">Dev Chetal</h2>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-sans text-gray-500 pt-1 mb-4 animate-fade-in-up animation-delay-200">
                   Full Stack Blockchain Developer
                 </h3>
 
-                <p className="text-xl text-gray-300 pt-5 mb-4 animate-fade-in-up animation-delay-400">Start</p>
-                <Link passHref href="/Skills">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-600">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                      />
-                    </svg>
-                    Skills {"..."}
-                  </p>
-                </Link>
-                <Link passHref href="/Projects">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-800">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776"
-                      />
-                    </svg>
-                    Projects {"..."}
-                  </p>
-                </Link>
-                <Link passHref href="/Email">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-1000">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
-                      />
-                    </svg>
-                    Get in Touch {"..."}
-                  </p>
-                </Link>
-                <Link passHref href="/Hobbies">
-                  <p className="text-blue-500 cursor-pointer text-sm pb-2 font-sans flex justify-start gap-1 items-center hover:text-blue-400 transition-colors duration-300 animate-fade-in-up animation-delay-1200">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-                      />
-                    </svg>
-                    Hobbies {"..."}
-                  </p>
-                </Link>
-
-
+                <p className="text-lg sm:text-xl text-gray-300 pt-3 mb-4 animate-fade-in-up animation-delay-400">Start</p>
+                <div className="space-y-2">
+                  <Link passHref href="/Skills">
+                    <div className="text-blue-500 cursor-pointer text-sm sm:text-base pb-2 font-sans flex justify-start gap-2 items-center hover:text-blue-400 transition-all duration-300 animate-fade-in-up animation-delay-600 hover:bg-gray-800 hover:bg-opacity-50 p-2 rounded-md">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-5 h-5 flex-shrink-0"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                        />
+                      </svg>
+                      <span>Skills {"..."}</span>
+                    </div>
+                  </Link>
+                  <Link passHref href="/Projects">
+                    <div className="text-blue-500 cursor-pointer text-sm sm:text-base pb-2 font-sans flex justify-start gap-2 items-center hover:text-blue-400 transition-all duration-300 animate-fade-in-up animation-delay-800 hover:bg-gray-800 hover:bg-opacity-50 p-2 rounded-md">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-5 h-5 flex-shrink-0"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776"
+                        />
+                      </svg>
+                      <span>Projects {"..."}</span>
+                    </div>
+                  </Link>
+                  <Link passHref href="/Email">
+                    <div className="text-blue-500 cursor-pointer text-sm sm:text-base pb-2 font-sans flex justify-start gap-2 items-center hover:text-blue-400 transition-all duration-300 animate-fade-in-up animation-delay-1000 hover:bg-gray-800 hover:bg-opacity-50 p-2 rounded-md">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-5 h-5 flex-shrink-0"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
+                        />
+                      </svg>
+                      <span>Get in Touch {"..."}</span>
+                    </div>
+                  </Link>
+                  <Link passHref href="/Hobbies">
+                    <div className="text-blue-500 cursor-pointer text-sm sm:text-base pb-2 font-sans flex justify-start gap-2 items-center hover:text-blue-400 transition-all duration-300 animate-fade-in-up animation-delay-1200 hover:bg-gray-800 hover:bg-opacity-50 p-2 rounded-md">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-5 h-5 flex-shrink-0"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+                        />
+                      </svg>
+                      <span>Hobbies {"..."}</span>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className=" flex-1">
+            <div className="flex-1 mt-8 lg:mt-0">
               <div
                 className={`p-2 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
-                style={{ paddingTop: isTabletOrMobile ? "5%" : "22%" }}
+                style={{ paddingTop: isTabletOrMobile ? "0%" : "22%" }}
               >
-                <p className="text-xl text-gray-300 pt-6 mb-1 animate-fade-in-up animation-delay-400">About</p>
-                <div className="pt-1">
+                <p className="text-lg sm:text-xl text-gray-300 pt-2 mb-4 animate-fade-in-up animation-delay-400">About</p>
+                <div className="space-y-3">
                   <Link
                     passHref
                     target="_blank"
                     href="https://www.linkedin.com/in/dev-chetal-068707171/"
                   >
                     <div
-                      className="cursor-pointer w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
+                      className="cursor-pointer w-full flex justify-start items-center p-3
+                        rounded-lg gap-3 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600 touch-manipulation"
                       style={{
                         backgroundColor: "#262626",
                         borderBottomWidth: "0.3rem",
                       }}
                     >
-                      <Image src="https://img.icons8.com/fluency/30/null/linkedin-circled.png" width="30" height="30" alt=""/>
-                      <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
+                      <Image src="https://img.icons8.com/fluency/30/null/linkedin-circled.png" width="30" height="30" alt="" className="flex-shrink-0"/>
+                      <p className="text-gray-200 text-sm sm:text-base font-sans flex justify-start items-center">
                         LinkedIn Profile
                       </p>
                     </div>
                   </Link>
-                </div>
-                <div className="mt-4">
                   <Link passHref target="_blank" href="https://github.com/computerdev21">
                     <div
-                      className="cursor-pointer w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-800"
+                      className="cursor-pointer w-full flex justify-start items-center p-3
+                        rounded-lg gap-3 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-800 touch-manipulation"
                       style={{
                         backgroundColor: "#262626",
                         borderBottomWidth: "0.3rem",
                       }}
                     >
-                      <Image width="30" height="30" src="https://img.icons8.com/3d-fluency/28/null/github.png"  alt=""/>{" "}
-                      <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
+                      <Image width="30" height="30" src="https://img.icons8.com/3d-fluency/28/null/github.png" alt="" className="flex-shrink-0"/>
+                      <p className="text-gray-200 text-sm sm:text-base font-sans flex justify-start items-center">
                         Github Page
                       </p>
                     </div>
                   </Link>
-                </div>
-                <div className="mt-4">
                   <Link
                     passHref
                     target="_blank"
                     href="https://x.com/DevChetal99"
                   >
                     <div
-                      className="cursor-pointer w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1000"
+                      className="cursor-pointer w-full flex justify-start items-center p-3
+                        rounded-lg gap-3 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1000 touch-manipulation"
                       style={{
                         backgroundColor: "#262626",
                         borderBottomWidth: "0.3rem",
                       }}
                     >
-                      <Image width="30" height="30" className="h-[30px]" src="https://img.icons8.com/color/48/twitterx--v1.png"  alt=""/>{" "}
-                      <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
+                      <Image width="30" height="30" className="h-[30px] flex-shrink-0" src="https://img.icons8.com/color/48/twitterx--v1.png" alt=""/>
+                      <p className="text-gray-200 text-sm sm:text-base font-sans flex justify-start items-center">
                         Twitter Handle
                       </p>
                     </div>
                   </Link>
-                </div>
-                <div className="mt-4">
                   <div
-                    className="w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1200"
+                    className="w-full flex justify-start items-center p-3
+                        rounded-lg gap-3 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1200 touch-manipulation"
                     style={{
                       backgroundColor: "#262626",
                       borderBottomWidth: "0.3rem",
                     }}
                   >
-                    <Image width="30" height="30" src="./bot.svg"  alt=""/>{" "}
-                    <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
+                    <Image width="30" height="30" src="./bot.svg" alt="" className="flex-shrink-0"/>
+                    <p className="text-gray-200 text-sm sm:text-base font-sans flex justify-start items-center">
                       Full Stack Blockchain AI Engineer
                     </p>
                   </div>
-                </div>
-                <div className="mt-4">
                   <div
-                    className="w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1400"
+                    className="w-full flex justify-start items-center p-3
+                        rounded-lg gap-3 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1400 touch-manipulation"
                     style={{
                       backgroundColor: "#262626",
                       borderBottomWidth: "0.3rem",
@@ -243,27 +235,25 @@ const Home: NextPage = () => {
                   >
                     <Image
                       src="https://img.icons8.com/ios-filled/20/ffffff/learn-more.png"
-                      className="ml-1 mr-1" width="25" height="25"
-                     alt=""/>{" "}
-                    <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
+                      className="ml-1 mr-1 flex-shrink-0" width="25" height="25"
+                     alt=""/>
+                    <p className="text-gray-200 text-sm sm:text-base font-sans flex justify-start items-center">
                       Constant Learner
                     </p>
                   </div>
-                </div>
-                <div className="mt-4">
                   <div
-                    className="w-full flex justify-start items-center pl-2 pr-2 p-1
-                        rounded-sm gap-2 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1600"
+                    className="w-full flex justify-start items-center p-3
+                        rounded-lg gap-3 border-b border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-1600 touch-manipulation"
                     style={{
                       backgroundColor: "#262626",
                       borderBottomWidth: "0.3rem",
                     }}
                   >
-                  <Image width="30" height="30" src="https://img.icons8.com/external-victoruler-flat-victoruler/26/null/external-farming-farming-victoruler-flat-victoruler.png"  alt=""/>
-                  <p className="text-gray-200 text-sm  font-sans flex justify-start items-center">
-                    Retirement Plan Farming
-                  </p>
-                </div>
+                    <Image width="30" height="30" src="https://img.icons8.com/external-victoruler-flat-victoruler/26/null/external-farming-farming-victoruler-flat-victoruler.png" alt="" className="flex-shrink-0"/>
+                    <p className="text-gray-200 text-sm sm:text-base font-sans flex justify-start items-center">
+                      Retirement Plan Farming
+                    </p>
+                  </div>
                 {isTabletOrMobile && (
                   <div className="mt-6 flex justify-center">
                     <a href={linktreeUrl} target="_blank" rel="noreferrer">

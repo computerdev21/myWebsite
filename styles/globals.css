@@ -23,19 +23,20 @@ body {
 
 @media only screen and (max-width: 768px) {
   .vscodecontainer {
-    margin-top: 15rem !important;
-    margin-bottom: 5rem !important;
+    margin-top: 8rem !important;
+    margin-bottom: 2rem !important;
     padding: 1rem !important;
   }
   
   .containerCenterImage {
     height: auto !important;
     min-height: calc(100vh - 60px) !important;
-    padding: 1rem !important;
+    padding: 0.5rem !important;
+    justify-content: flex-start !important;
   }
   
   .animate-fade-in-up {
-    animation-duration: 0.6s !important;
+    animation-duration: 0.5s !important;
   }
   
   .animation-delay-200 {
@@ -43,31 +44,153 @@ body {
   }
   
   .animation-delay-400 {
-    animation-delay: 0.2s !important;
+    animation-delay: 0.15s !important;
   }
   
   .animation-delay-600 {
-    animation-delay: 0.3s !important;
+    animation-delay: 0.2s !important;
   }
   
   .animation-delay-800 {
-    animation-delay: 0.4s !important;
+    animation-delay: 0.25s !important;
   }
   
   .animation-delay-1000 {
-    animation-delay: 0.5s !important;
+    animation-delay: 0.3s !important;
   }
   
   .animation-delay-1200 {
-    animation-delay: 0.6s !important;
+    animation-delay: 0.35s !important;
   }
   
   .animation-delay-1400 {
-    animation-delay: 0.7s !important;
+    animation-delay: 0.4s !important;
   }
   
   .animation-delay-1600 {
-    animation-delay: 0.8s !important;
+    animation-delay: 0.45s !important;
+  }
+  
+  /* Mobile-specific improvements */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Better spacing for mobile */
+  .space-y-2 > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .space-y-3 > * + * {
+    margin-top: 1rem;
+  }
+  
+  /* Improve text readability on mobile */
+  body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Mobile-specific button improvements */
+  .hover\:bg-gray-800:hover {
+    background-color: rgba(31, 41, 55, 0.8);
+  }
+  
+  /* Better mobile scrolling */
+  .scrollbar {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Mobile-friendly focus states */
+  .focus\:outline-none:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  /* Mobile header improvements */
+  .header {
+    height: 50px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-menu {
+    display: none;
+  }
+  
+  .header-app-icons {
+    right: 1rem;
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 60;
+  }
+  
+  /* Mobile bottom header */
+  .bottom-header {
+    height: 30px;
+    font-size: 0.75rem;
+  }
+  
+  .bottom-header .left,
+  .bottom-header .right {
+    padding: 0 0.5rem;
+  }
+  
+  /* Ensure main content is visible on mobile */
+  main {
+    width: 100% !important;
+    height: auto !important;
+    min-height: calc(100vh - 80px) !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+  
+  /* Fix mobile content display */
+  .scrollbar {
+    overflow: visible !important;
+  }
+  
+  /* Mobile container fixes */
+  .containerCenterImage {
+    width: 100% !important;
+    height: auto !important;
+    min-height: calc(100vh - 80px) !important;
+    overflow: visible !important;
+  }
+}
+
+/* Additional mobile breakpoints */
+@media only screen and (max-width: 480px) {
+  .vscodecontainer {
+    margin-top: 6rem !important;
+    padding: 0.75rem !important;
+  }
+  
+  .containerCenterImage {
+    padding: 0.25rem !important;
+  }
+  
+  /* Smaller text for very small screens */
+  .text-3xl {
+    font-size: 1.75rem !important;
+  }
+  
+  .text-lg {
+    font-size: 1rem !important;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem !important;
   }
 }
 

@@ -43,35 +43,57 @@
 
 @media only screen and (max-width: 768px) {
   .navside {
-    width: 100vw;
-    height: auto;
-    display: block;
-    position: relative;
+    display: none !important;
   }
   
   .mainside {
-    width: 100vw;
-    height: auto;
-    margin-top: 0;
-    margin-left: 0;
-    display: block;
-    position: relative;
+    width: 100vw !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    left: 0 !important;
+    position: relative !important;
+    display: block !important;
+    padding: 0 !important;
   }
   
   .navsidecollapse {
-    width: 100vw;
-    height: auto;
-    display: block;
-    position: relative;
+    display: none !important;
   }
   
   .mainsidecollapse {
-    width: 100vw;
-    height: auto;
-    margin-top: 0;
-    margin-left: 0;
-    left: 0;
-    position: relative;
-    display: block;
+    width: 100vw !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    left: 0 !important;
+    position: relative !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+  
+  /* Mobile header improvements */
+  .header {
+    height: 50px;
+    padding: 0 1rem;
+  }
+  
+  .header-menu {
+    display: none;
+  }
+  
+  .header-app-icons {
+    right: 1rem;
+  }
+  
+  /* Mobile bottom header */
+  .bottom-header {
+    height: 30px;
+    font-size: 0.75rem;
+  }
+  
+  .bottom-header .left,
+  .bottom-header .right {
+    padding: 0 0.5rem;
   }
 }

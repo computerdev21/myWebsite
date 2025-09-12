@@ -25,20 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/404.js"
     ],
-    "/Email": [
+    "/Gaming": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Email.js"
-    ],
-    "/Hobbies": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Hobbies.js"
-    ],
-    "/Projects": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Projects.js"
+      "static/chunks/pages/Gaming.js"
     ],
     "/Skills": [
       "static/chunks/webpack.js",
