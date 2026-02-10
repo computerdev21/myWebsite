@@ -4,6 +4,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 import { useMediaQuery } from "react-responsive";
 import Head from "next/head";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const hobbies = [
   {
@@ -29,7 +30,13 @@ const hobbies = [
 ];
 
 const Hobbies: NextPage = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
+  const isTabletOrMobileQuery = useMediaQuery({ query: "(max-width: 943px)" });
+  const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
+
+  useEffect(() => {
+    setIsTabletOrMobile(isTabletOrMobileQuery);
+  }, [isTabletOrMobileQuery]);
+
   return (
       <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200} universal>
         <Head>

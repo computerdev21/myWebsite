@@ -1,12 +1,17 @@
 import { NextPage } from "next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { useMediaQuery } from "react-responsive";
 import Head from "next/head";
 import Image from "next/image";
 
 const Email: NextPage = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
+  const isTabletOrMobileQuery = useMediaQuery({ query: "(max-width: 943px)" });
+  const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
+
+  useEffect(() => {
+    setIsTabletOrMobile(isTabletOrMobileQuery);
+  }, [isTabletOrMobileQuery]);
 
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");

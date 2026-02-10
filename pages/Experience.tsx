@@ -9,9 +9,15 @@ import "react-vertical-timeline-component/style.min.css";
 import Image from "next/legacy/image";
 import { useMediaQuery } from "react-responsive";
 import Head from "next/head";
+import { useState, useEffect } from "react";
 
 const MyWork: NextPage = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
+  const isTabletOrMobileQuery = useMediaQuery({ query: "(max-width: 943px)" });
+  const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
+
+  useEffect(() => {
+    setIsTabletOrMobile(isTabletOrMobileQuery);
+  }, [isTabletOrMobileQuery]);
 
   const timelineElements = [
     {

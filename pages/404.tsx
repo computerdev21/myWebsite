@@ -1,7 +1,13 @@
 import { useMediaQuery } from "react-responsive";
+import { useState, useEffect } from "react";
 
 export default function Custom404() {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
+  const isTabletOrMobileQuery = useMediaQuery({ query: "(max-width: 943px)" });
+  const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
+
+  useEffect(() => {
+    setIsTabletOrMobile(isTabletOrMobileQuery);
+  }, [isTabletOrMobileQuery]);
 
   if (!isTabletOrMobile) {
     return (

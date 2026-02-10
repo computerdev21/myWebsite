@@ -7,10 +7,15 @@ import Head from "next/head";
 import Image from "next/image";
 
 const Gaming: NextPage = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
+  const isTabletOrMobileQuery = useMediaQuery({ query: "(max-width: 943px)" });
+  const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
   const [play, setPlay] = useState<any>(true);
 
   const player: any = React.createRef();
+
+  useEffect(() => {
+    setIsTabletOrMobile(isTabletOrMobileQuery);
+  }, [isTabletOrMobileQuery]);
 
   useEffect(() => {
     if (player.current) {

@@ -5,9 +5,15 @@ import Link from "next/link";
 import {useMediaQuery} from "react-responsive";
 import {projectsdata} from "../../Components/JSON/projectsdata";
 import Head from "next/head";
+import { useState, useEffect } from "react";
 
 const Projects: NextPage = (props: any) => {
-    const isTabletOrMobile = useMediaQuery({query: "(max-width: 943px)"});
+    const isTabletOrMobileQuery = useMediaQuery({query: "(max-width: 943px)"});
+    const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
+
+    useEffect(() => {
+        setIsTabletOrMobile(isTabletOrMobileQuery);
+    }, [isTabletOrMobileQuery]);
 
     const slugify = (text: string) =>
         text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w\-]+/g, "");

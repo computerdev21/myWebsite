@@ -9,7 +9,8 @@ import Image from 'next/image';
 const Home: NextPage = () => {
   const [index, setIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
+  const isTabletOrMobileQuery = useMediaQuery({ query: "(max-width: 943px)" });
+  const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
   const router = useRouter();
   const linktreeUrl = "https://linktr.ee/devchetal";
 
@@ -25,8 +26,9 @@ const Home: NextPage = () => {
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
     setIsLoaded(true);
+    setIsTabletOrMobile(isTabletOrMobileQuery);
     return () => clearTimeout(intervalId);
-  }, []);
+  }, [isTabletOrMobileQuery]);
 
   return (
     <>

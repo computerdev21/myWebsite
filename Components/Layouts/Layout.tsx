@@ -12,12 +12,14 @@ const Layout: React.FC = ({ children }: any) => {
   const [openSideMenu, setOpenSideMenu] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobileQuery = useMediaQuery({ query: "(max-width: 768px)" });
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    setIsMobile(isMobileQuery);
+  }, [isMobileQuery]);
 
   // Close mobile nav when route changes
   useEffect(() => {
