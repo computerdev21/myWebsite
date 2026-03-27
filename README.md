@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# Dev Chetal Platform Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Design-forward portfolio platform built with **React + TypeScript + Vite**.
 
-Currently, two official plugins are available:
+## Implemented platform architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Public routes
+- `/` — premium landing + featured work + contact capture.
+- `/projects` — project index (featured + additional).
+- `/projects/:slug` — project case-study detail pages.
+- `/experience` — experience listing.
+- `/experience/:slug` — professional profile detail pages.
+- `/resume` — embedded resume viewer with fallback actions.
 
-## React Compiler
+### Internal route
+- `/admin` — internal dashboard for managing portfolio content.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Admin capabilities
+- Add / edit / delete projects.
+- Add / edit / delete experiences.
+- Reorder records (up/down controls).
+- Toggle featured state.
+- Manage resume URL + embed URL.
+- Manage contact settings (`targetEmail`, store toggle, notification toggle).
+- Manage hero/site settings.
+- View high-level dashboard stats.
 
-## Expanding the ESLint configuration
+## Data model
+Content is currently stored in localStorage via `src/lib/portfolio-content.ts` with seed data matching requested projects and experiences.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Model groups:
+- `projects`
+- `experiences`
+- `resume`
+- `contact`
+- `site`
+- `submissions`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Environment variables
+```bash
+VITE_ADMIN_PASSCODE=your-strong-passcode
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contact architecture
+Current behavior:
+- Public form stores submissions when `contact.storeSubmissions = true`.
+- Data goes to `submissions` in the content store.
+- `sendNotifications` is exposed as config for future integration.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Suggested production contract:
+- `POST /api/contact`
+- Body: `{ name, email, message }`
+- Server writes to DB + conditionally sends email notification based on settings.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Supabase migration path (recommended)
+The current store is intentionally shaped for clean migration.
+
+Suggested tables:
+- `projects`
+- `experiences`
+- `resume_settings`
+- `contact_settings`
+- `site_settings`
+- `contact_submissions`
+- `admin_users`
+
+Add RLS policies:
+- Public read on portfolio content.
+- Authenticated admin write/update/delete on content tables.
+- Admin-only read on `contact_submissions`.
+
+## Run locally
+```bash
+npm install
+npm run dev
+```
+
+## Build check
+```bash
+npm run build
 ```
