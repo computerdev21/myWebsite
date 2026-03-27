@@ -6,7 +6,7 @@ import { useTheme } from '../contexts/ThemeContext';
 
 const navLinks = [
   { name: 'Home', href: '/', icon: null },
-  { name: 'Work', href: '/work', icon: Briefcase },
+  { name: 'Projects', href: '/work', icon: Briefcase },
   { name: 'Skills', href: '/skills', icon: Layers },
   { name: 'Hobbies', href: '/hobbies', icon: Heart },
   { name: 'Resume', href: '/resume', icon: null },
