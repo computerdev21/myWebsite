@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"_app.tsx -> nextjs-progressbar":{"id":"_app.tsx -> nextjs-progressbar","files":["static/chunks/node_modules_nextjs-progressbar_dist_index_js.js"]}}

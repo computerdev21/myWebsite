@@ -1,0 +1,553 @@
+{
+  "updatedAt": "2026-03-26T12:00:00.000Z",
+  "meta": {
+    "siteTitle": "Dev Chetal | Portfolio",
+    "siteDescription": "Full stack blockchain and AI engineer building thoughtful products with modern web systems, applied machine intelligence, and sharp execution.",
+    "siteUrl": "https://example.com"
+  },
+  "profile": {
+    "name": "Dev Chetal",
+    "title": "Full stack blockchain and AI engineer",
+    "subtitle": "I build product-grade software across AI, Web3, and full-stack systems with an eye for speed, clarity, and execution.",
+    "intro": "From DeFi infrastructure to AI career tools, I like turning ambitious ideas into dependable products that feel clean, fast, and ready for real users.",
+    "location": "Toronto, ON",
+    "availability": "Open to select product, startup, and freelance opportunities.",
+    "email": "DevChetal@gmail.com",
+    "profileImage": "/portfolio/profile-photo.jpg",
+    "heroImage": "/portfolio/hero-bg.jpg",
+    "aboutImage": "/portfolio/about-visual.jpg",
+    "resumeUrl": "",
+    "resumeLabel": "Resume",
+    "socials": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/computerdev21"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/dev-chetal-068707171/"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/DevChetal99"
+      },
+      {
+        "label": "Email",
+        "href": "mailto:DevChetal@gmail.com"
+      }
+    ]
+  },
+  "focusAreas": [
+    {
+      "title": "AI product engineering",
+      "description": "Building user-facing AI flows, prompt systems, model-powered UX, and production-ready services around them."
+    },
+    {
+      "title": "Blockchain systems",
+      "description": "Shipping smart contracts, trading automation, DeFi tooling, and the web apps that make them usable."
+    },
+    {
+      "title": "Full-stack delivery",
+      "description": "Owning the path from concept to polished interface, API, infrastructure, and launch-ready product behavior."
+    }
+  ],
+  "stats": [
+    {
+      "label": "Years in product and engineering",
+      "value": "5+"
+    },
+    {
+      "label": "Projects shipped across AI and Web3",
+      "value": "20+"
+    },
+    {
+      "label": "Stacks I regularly work across",
+      "value": "10+"
+    }
+  ],
+  "about": {
+    "summary": "I enjoy building technically ambitious products that still feel simple and intuitive when someone actually uses them.",
+    "detail": "My background spans full-stack product development, blockchain engineering, AI experimentation, mobile work, and developer tooling. That range lets me move between architecture, interface design, and execution details without losing the product story. I care a lot about performance, readable systems, and experiences that stay calm even when the underlying logic is complex.",
+    "principles": [
+      "Build with product intent, not just technical novelty.",
+      "Keep interfaces clear enough to scan in seconds.",
+      "Treat infrastructure, developer experience, and polish as one system."
+    ]
+  },
+  "experience": [
+    {
+      "company": "NEVO Network",
+      "location": "Toronto, ON",
+      "role": "Full Stack Blockchain Developer",
+      "date": "June 2024 - Present",
+      "summary": "Leading product and platform work on DeFi infrastructure and supporting full-stack surfaces around it.",
+      "points": [
+        "Built decentralized exchange flows on Binance Smart Chain with smart contracts and account abstraction in mind.",
+        "Managed scalable cloud infrastructure with Kubernetes, Docker, and automation.",
+        "Delivered REST APIs and database improvements to support performance and growth."
+      ],
+      "techStack": "Solidity, JavaScript, Node.js, React, Kubernetes, AWS, Docker"
+    },
+    {
+      "company": "Linamar Corporation",
+      "location": "Canada",
+      "role": "Machine Learning Programmer Co-op",
+      "date": "January 2024 - May 2024",
+      "summary": "Worked on applied ML for manufacturing optimization and production intelligence.",
+      "points": [
+        "Developed machine learning workflows for manufacturing quality and process optimization.",
+        "Applied predictive analytics to production efficiency and inspection tasks.",
+        "Worked with computer vision systems for automated analysis."
+      ],
+      "techStack": "Python, TensorFlow, PyTorch, OpenCV, Pandas, NumPy, Docker, AWS"
+    },
+    {
+      "company": "FEOOH",
+      "location": "Mississauga, ON",
+      "role": "Full Stack Developer",
+      "date": "August 2023 - April 2024",
+      "summary": "Built internal dashboards, payments tooling, and operational systems for ad workflows.",
+      "points": [
+        "Developed ad dashboards with Laravel, Vue.js, and Inertia.js.",
+        "Integrated secure payment and CRM systems including 3DS PAAY and Konnektive.",
+        "Connected Omnisend for transactional email and SMS automation."
+      ],
+      "techStack": "Laravel, Vue.js, Inertia.js, Java, Omnisend, 3DS"
+    },
+    {
+      "company": "PACTREON",
+      "location": "Delhi, IN",
+      "role": "Full Stack Developer",
+      "date": "September 2021 - June 2023",
+      "summary": "Improved workflow tooling, marketing automation, and internal operations.",
+      "points": [
+        "Built workflow dashboards and internal product surfaces.",
+        "Integrated CRM APIs and payment-related systems.",
+        "Streamlined email and SMS flows tied to campaign operations."
+      ],
+      "techStack": "Laravel, Vue.js, Inertia.js, CRM APIs, Omnisend"
+    },
+    {
+      "company": "Merc Rides",
+      "location": "Remote",
+      "role": "Android Developer",
+      "date": "2021",
+      "summary": "Created mobile booking experiences for marine test-ride events.",
+      "points": [
+        "Built Android booking flows for event-based scheduling.",
+        "Integrated Spring Boot, Firebase, Twilio, and SendGrid.",
+        "Implemented scheduling logic using a knapsack-style optimization approach."
+      ],
+      "techStack": "Android, Spring Boot, Firebase, Twilio, PostgreSQL, Heroku"
+    }
+  ],
+  "skillGroups": [
+    {
+      "name": "Languages",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Go",
+        "C",
+        "Assembly"
+      ]
+    },
+    {
+      "name": "Frontend and product UI",
+      "skills": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Vue.js",
+        "Inertia.js",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "name": "Backend and infrastructure",
+      "skills": [
+        "Node.js",
+        "Express",
+        "FastAPI",
+        "Flask",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Jenkins"
+      ]
+    },
+    {
+      "name": "Data, AI, and ML",
+      "skills": [
+        "OpenAI",
+        "TensorFlow",
+        "PyTorch",
+        "scikit-learn",
+        "NumPy",
+        "Pandas",
+        "OpenCV",
+        "MediaPipe"
+      ]
+    },
+    {
+      "name": "Blockchain and Web3",
+      "skills": [
+        "Solidity",
+        "Ethers.js",
+        "Uniswap V3",
+        "Avalanche",
+        "Hardhat",
+        "CCXT",
+        "Web3 tooling"
+      ]
+    },
+    {
+      "name": "Databases and tooling",
+      "skills": [
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Drizzle ORM",
+        "Neon DB",
+        "Git",
+        "Postman",
+        "JIRA"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "resumode",
+      "name": "Resumode",
+      "tagline": "AI-powered resume assistant",
+      "description": "Resume analysis and ATS feedback platform with conversational guidance for improving job applications.",
+      "longDescription": "Resumode is an AI-driven resume assistant that compares uploaded resumes with job descriptions and produces ATS-focused feedback. The product combines resume parsing, structured evaluation, and conversational explanations so candidates can understand what to improve instead of just receiving a score.\n\nI approached the experience as both a workflow and a product problem: the analysis needed to feel trustworthy, the UI needed to stay simple, and the data layer needed to support repeatable uploads and feedback loops.",
+      "image": "/portfolio/project-resume-ai.jpg",
+      "category": "AI",
+      "year": "2025",
+      "featured": true,
+      "role": "Creator and full-stack developer",
+      "period": "2025",
+      "status": "Live product",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "OpenAI",
+        "Drizzle ORM",
+        "Neon DB"
+      ],
+      "highlights": [
+        "Resume upload and structured ATS analysis",
+        "OpenAI-powered recommendations and explanations",
+        "Interactive chat workflow around career feedback",
+        "Product-focused UI built for clarity and iteration"
+      ],
+      "metrics": [
+        {
+          "label": "Core surface",
+          "value": "Resume review"
+        },
+        {
+          "label": "Stack",
+          "value": "Next.js + OpenAI"
+        },
+        {
+          "label": "Role",
+          "value": "Product owner"
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Make AI feedback feel actionable",
+          "solution": "Structured the output into understandable categories so users could move from diagnosis to revision quickly."
+        },
+        {
+          "title": "Balance product polish with analysis depth",
+          "solution": "Kept the UI calm and progressively revealed deeper guidance only when the user needed it."
+        }
+      ],
+      "links": {
+        "live": "https://resumode.vercel.app/",
+        "github": "https://github.com/computerdev21/resume-ai-chatbot"
+      }
+    },
+    {
+      "slug": "prepwise-ai",
+      "name": "PrepWise AI",
+      "tagline": "AI mock interview platform",
+      "description": "A career preparation experience that combines interview simulation, feedback systems, and multimodal analysis.",
+      "longDescription": "PrepWise AI was built to make interview preparation more realistic and more measurable. It combines speech analysis, body-language signals, AI-generated feedback, and interactive mock interview flows to help candidates practice with more context than a static question bank.\n\nThe challenge was coordinating several ML-powered subsystems while keeping the experience usable for someone who just wants quick, credible preparation support.",
+      "image": "/portfolio/project-prepwise.jpg",
+      "category": "AI",
+      "year": "2024",
+      "featured": true,
+      "role": "Lead developer",
+      "period": "2024",
+      "status": "Prototype and product build",
+      "tech": [
+        "Python",
+        "FastAPI",
+        "Flask",
+        "OpenAI Whisper",
+        "TensorFlow",
+        "MediaPipe",
+        "Docker"
+      ],
+      "highlights": [
+        "Speech transcription and analysis with Whisper",
+        "Behavior and posture feedback pipeline",
+        "Generative feedback for interview quality",
+        "Containerized architecture for repeatable deployment"
+      ],
+      "metrics": [
+        {
+          "label": "Focus",
+          "value": "Interview coaching"
+        },
+        {
+          "label": "Signals",
+          "value": "Voice + body language"
+        },
+        {
+          "label": "Mode",
+          "value": "Real-time feedback"
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Combine multimodal analysis into one product",
+          "solution": "Built the feature set around one user flow so transcription, feedback, and posture signals felt like one experience."
+        },
+        {
+          "title": "Keep feedback helpful instead of overwhelming",
+          "solution": "Turned raw model outputs into clear next-step recommendations with user-friendly language."
+        }
+      ],
+      "links": {
+        "github": "https://github.com/computerdev21/PrepWise"
+      }
+    },
+    {
+      "slug": "ai-btc-bot",
+      "name": "AI BTC Bot",
+      "tagline": "Machine learning powered crypto market tooling",
+      "description": "Experimented with ML-driven Bitcoin analysis and trading suggestions using market data pipelines.",
+      "longDescription": "This project explored how machine learning models could support crypto trading decisions by turning market data into directional suggestions. The emphasis was on experimentation, signal design, and real-time accessibility rather than building a black-box promise machine.\n\nIt was a useful bridge between backend data processing, model experimentation, and the product question of how to communicate uncertainty to users.",
+      "image": "/portfolio/project-btcai.jpg",
+      "category": "AI",
+      "year": "2023",
+      "featured": false,
+      "role": "Builder",
+      "period": "2023",
+      "status": "Research and prototype",
+      "tech": [
+        "Python",
+        "TensorFlow",
+        "CCXT",
+        "Node.js"
+      ],
+      "highlights": [
+        "Market data ingestion and experimentation",
+        "Prediction-oriented model workflows",
+        "Trading suggestion interface",
+        "Applied ML in a fast-moving domain"
+      ],
+      "metrics": [
+        {
+          "label": "Domain",
+          "value": "Crypto"
+        },
+        {
+          "label": "Approach",
+          "value": "ML-assisted signals"
+        },
+        {
+          "label": "Stack",
+          "value": "Python + TensorFlow"
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Unstable, noisy source data",
+          "solution": "Focused on pipeline reliability and exploratory modeling rather than overstating prediction certainty."
+        }
+      ],
+      "links": {
+        "github": "https://github.com/computerdev21/btcaiTest"
+      }
+    },
+    {
+      "slug": "uniswap-swapper",
+      "name": "UniSwap Swapper",
+      "tagline": "DeFi volume and swap automation",
+      "description": "Automation tooling around token swaps and volume activity on top of Uniswap V3 infrastructure.",
+      "longDescription": "UniSwap Swapper automates token swap flows to support repeated exchange interactions on Uniswap. The work focused on wallet orchestration, transaction execution, and making the operational behavior more reliable in a fee-sensitive environment.\n\nThis project sharpened my understanding of blockchain execution constraints, smart tooling ergonomics, and how backend automation decisions show up as user trust issues later.",
+      "image": "/portfolio/project-uniswap.jpg",
+      "category": "Blockchain",
+      "year": "2023",
+      "featured": true,
+      "role": "Blockchain engineer",
+      "period": "2023",
+      "status": "Operational tooling",
+      "tech": [
+        "Solidity",
+        "Ethers.js",
+        "Uniswap V3",
+        "Node.js"
+      ],
+      "highlights": [
+        "Automated token swaps across wallets",
+        "Operational logic tuned for execution efficiency",
+        "DeFi automation built around actual protocol constraints",
+        "Backend services for repeatable swap activity"
+      ],
+      "metrics": [
+        {
+          "label": "Network",
+          "value": "Ethereum ecosystem"
+        },
+        {
+          "label": "Focus",
+          "value": "Execution automation"
+        },
+        {
+          "label": "Tooling",
+          "value": "Ethers.js"
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Fee-sensitive repeated execution",
+          "solution": "Paid close attention to operational efficiency and wallet orchestration to reduce waste."
+        }
+      ],
+      "links": {
+        "github": "https://github.com/computerdev21/UniSwapSwapper"
+      }
+    },
+    {
+      "slug": "edbucks",
+      "name": "EdBucks",
+      "tagline": "Blockchain crowdfunding for research and education",
+      "description": "Decentralized funding platform built on Avalanche with milestone-driven contract logic and community-facing flows.",
+      "longDescription": "EdBucks explored decentralized crowdfunding around education and research use cases. The platform centered around transparent contribution mechanics, milestone-oriented smart contract behavior, and a product story that made blockchain feel useful rather than ornamental.\n\nThe project combined frontend product thinking with on-chain logic, governance ideas, and deployment considerations.",
+      "image": "/portfolio/project-frostiyeti.jpg",
+      "category": "Blockchain",
+      "year": "2023",
+      "featured": true,
+      "role": "Blockchain and product developer",
+      "period": "2023",
+      "status": "Shipped build",
+      "tech": [
+        "Avalanche",
+        "Solidity",
+        "Hardhat",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "highlights": [
+        "Milestone-based smart contract structure",
+        "Governance thinking baked into product flows",
+        "End-to-end dApp delivery",
+        "Crowdfunding model tailored for mission-driven use cases"
+      ],
+      "metrics": [
+        {
+          "label": "Theme",
+          "value": "Crowdfunding"
+        },
+        {
+          "label": "Chain",
+          "value": "Avalanche"
+        },
+        {
+          "label": "Role",
+          "value": "Full-stack"
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Make a Web3 concept understandable",
+          "solution": "Used the product interface to explain value and flow clearly before asking users to trust the chain logic."
+        }
+      ],
+      "links": {
+        "github": "https://github.com/BhartiyaYeti/FrostiYeti-V2"
+      }
+    },
+    {
+      "slug": "resum8-backend",
+      "name": "Resum8 Backend",
+      "tagline": "Resume platform backend services",
+      "description": "API and authentication layer powering resume workflows, secure access, and processing services.",
+      "longDescription": "Resum8 Backend was built to support the resume product layer with reliable API endpoints, authentication, and data persistence. The project focused on the operational side of product quality: secure flows, maintainable endpoints, and a backend flexible enough to support future features.\n\nIt complements the user-facing portfolio of AI resume tools by handling the system responsibilities behind them.",
+      "image": "/portfolio/project-resum8.jpg",
+      "category": "Full Stack",
+      "year": "2024",
+      "featured": false,
+      "role": "Backend developer",
+      "period": "2024",
+      "status": "Supporting service",
+      "tech": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
+      "highlights": [
+        "Secure API endpoints",
+        "Authentication flows",
+        "Resume-oriented backend services",
+        "Persistence layer for product features"
+      ],
+      "metrics": [
+        {
+          "label": "Layer",
+          "value": "Backend"
+        },
+        {
+          "label": "Auth",
+          "value": "JWT"
+        },
+        {
+          "label": "Data",
+          "value": "MongoDB"
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Support product growth without overbuilding",
+          "solution": "Kept the API surface focused on the actual resume workflows the frontend needed."
+        }
+      ],
+      "links": {
+        "live": "https://github.com/computerdev21/Resum8Backend",
+        "github": "https://github.com/computerdev21/Resum8Backend"
+      }
+    }
+  ],
+  "hobbies": [
+    {
+      "title": "Gaming",
+      "description": "I like fast feedback loops, systems that reward mastery, and the product design lessons great games teach.",
+      "note": "A lot of my UI instincts come from how games handle flow, clarity, and momentum."
+    },
+    {
+      "title": "Anime and storytelling",
+      "description": "I’m drawn to visual storytelling, strong worldbuilding, and character arcs with emotional payoff.",
+      "note": "It influences how I think about pacing, polish, and the feeling a product leaves behind."
+    },
+    {
+      "title": "Learning new stacks",
+      "description": "I enjoy going deep on unfamiliar systems and getting practical with them quickly.",
+      "note": "That curiosity is a big part of why I move comfortably between AI, Web3, backend, and product work."
+    }
+  ],
+  "contact": {
+    "headline": "Build something ambitious, but make it feel easy.",
+    "description": "If you’re working on AI tools, product infrastructure, blockchain systems, or a startup that needs someone comfortable across the whole stack, I’d love to talk.",
+    "availabilityNote": "Best for product engineering, technical consulting, MVP builds, and systems that need both execution and taste."
+  }
+}

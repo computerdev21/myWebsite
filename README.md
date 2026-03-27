@@ -1,40 +1,73 @@
-# Visual Studio Code Themed Developer Portfolio
+# React + TypeScript + Vite
 
-An Visual Studio Themed Developer Portfolio built using TypeScript, Next.js and Tailwind.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-> *Warning*
-> Since i was getting many requests for open sourcing the repository, i have open sourced it, but please note that code of this project is pure mess, since i created this as a practice while learning Next.js as a fresher. Now, I don't have enough mental strength to face it and rewrite it, so if anyone wants to contribute. It will help people a lot. Thanks.
+Currently, two official plugins are available:
 
-## Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Visual Studio Code Theme Portfolio,
-- Projects List and Details Page
-- Skills and experience section
-- Contact page to help visitors reach out to you via email
-- Misc Sections like Anime, Gaming etc..
-- Styled using **Tailwind CSS**
-- Written in **TypeScript**
+## React Compiler
 
-## Known Issues
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1. ~Code needs a rewrite
-2. ~Rewrite Mobile View responsiveness code
+## Expanding the ESLint configuration
 
-## Running Locally
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-1. Install dependencies using npm:
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-```sh
-npm install
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-2. Start the development server:
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```sh
-npm run dev
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-## License
-
-Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
-"# VS-Code-Theme-Portfolio" 
