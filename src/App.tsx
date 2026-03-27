@@ -1,24 +1,22 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navigation from './sections/Navigation';
 import AIChatbot from './components/AIChatbot';
 import Home from './pages/Home';
-import Work from './pages/Work';
-import Skills from './pages/Skills';
-import Hobbies from './pages/Hobbies';
 import ProjectDetail from './pages/ProjectDetail';
-import About from './pages/About';
 import Resume from './pages/Resume';
+import ProjectsPage from './pages/Projects';
+import ExperiencePage from './pages/Experience';
+import ExperienceDetailPage from './pages/ExperienceDetail';
+import AdminPage from './pages/Admin';
 import './App.css';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
   return null;
 }
 
@@ -34,14 +32,15 @@ function AppContent() {
       smoothWheel: true,
     });
 
-    function raf(time: number) {
+    let frame = 0;
+    const raf = (time: number) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+      frame = requestAnimationFrame(raf);
+    };
 
-    requestAnimationFrame(raf);
-
+    frame = requestAnimationFrame(raf);
     return () => {
+      cancelAnimationFrame(frame);
       lenis.destroy();
     };
   }, []);
@@ -53,19 +52,20 @@ function AppContent() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/hobbies" element={<Hobbies />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/experience/:slug" element={<ExperienceDetailPage />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
     </div>
   );
 }
 
-function App() {
+export default function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
@@ -75,5 +75,3 @@ function App() {
     </ThemeProvider>
   );
 }
-
-export default App;
