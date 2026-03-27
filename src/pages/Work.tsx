@@ -1,225 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowUpRight, ExternalLink, Github } from 'lucide-react';
-
-type PortfolioProject = {
-  id: string;
-  title: string;
-  tagline: string;
-  description: string;
-  tech: string[];
-  category: 'AI' | 'Blockchain' | 'Analytics' | 'Full Stack' | 'Platform';
-  featured: boolean;
-  color: string;
-  year: string;
-  image: string;
-  githubUrl?: string;
-  liveUrl?: string;
-};
+import { getProjects, type Project } from '../lib/data';
 
 const categories = ['All', 'AI', 'Full Stack', 'Blockchain', 'Analytics', 'Platform'];
 
-const projects: PortfolioProject[] = [
-  {
-    id: 'archetype',
-    title: 'Archetype',
-    tagline: 'Adaptive Crypto Intelligence Layer',
-    description:
-      'Designed a personalized crypto strategist that adapts to investor persona, risk tolerance, and strategic goals to drive guided decision flows and trend-aware portfolio planning.',
-    tech: ['TypeScript', 'React', 'Portfolio Intelligence', 'BitGo-ready'],
-    category: 'Blockchain',
-    featured: true,
-    color: 'from-orange-500 to-pink-500',
-    year: '2026',
-    image: '/project-archetype.jpg',
-    githubUrl: 'https://github.com/computerdev21/Archetype',
-  },
-  {
-    id: 'echoelders',
-    title: 'EchoElders Companion (Everly)',
-    tagline: 'Voice AI for Elder Care',
-    description:
-      'Developed a voice companion for elder care with VAPI-driven conversations, webhook orchestration, transcript capture, and caregiver-ready summaries for memory, mood, and medication signals.',
-    tech: ['Next.js', 'React', 'VAPI', 'Supabase', 'Webhooks'],
-    category: 'AI',
-    featured: true,
-    color: 'from-blue-500 to-cyan-500',
-    year: '2025',
-    image: '/project-prepwise.jpg',
-  },
-  {
-    id: 'intrabot',
-    title: 'IntraBot – AI-Powered Internship Assistant',
-    tagline: 'Resume Intelligence + ATS Workflow',
-    description:
-      'Built an AI resume analysis workflow with PDF upload, text extraction, JD matching, ATS-style checks, scoring, and a follow-up chatbot grounded in each uploaded resume.',
-    tech: ['Next.js', 'Python', 'NLP', 'PDF Parsing', 'LLM Workflow'],
-    category: 'AI',
-    featured: true,
-    color: 'from-purple-500 to-indigo-600',
-    year: '2025',
-    image: '/project-resume-ai.jpg',
-  },
-  {
-    id: 'interview-practice-bot',
-    title: 'Interview Practice Bot',
-    tagline: 'Multimodal Interview Coaching',
-    description:
-      'Engineered an AI mock interview assistant that evaluates communication patterns and posture/body-language signals to generate practical behavioral feedback and confidence coaching.',
-    tech: ['Python', 'Computer Vision', 'Speech Analysis', 'Coaching Engine'],
-    category: 'AI',
-    featured: true,
-    color: 'from-emerald-500 to-teal-600',
-    year: '2025',
-    image: '/project-resume-ai.jpg',
-  },
-  {
-    id: 'realtime-speech-analysis',
-    title: 'Real-Time Speech Analysis Model',
-    tagline: 'Low-Latency Interview Speech Scoring',
-    description:
-      'Built a low-latency speech intelligence pipeline for mock interviews with filler-word detection, accent deviation analysis, and clarity/pace scoring optimized for CPU inference.',
-    tech: ['PyTorch', 'Transformers', 'ONNX', 'CPU Inference', 'Audio ML'],
-    category: 'AI',
-    featured: true,
-    color: 'from-red-500 to-orange-500',
-    year: '2025',
-    image: '/project-btcai.jpg',
-  },
-  {
-    id: 'airline-analytics',
-    title: 'Airline Delay & Cancellation Analytics',
-    tagline: 'Risk Modeling + What-if Analysis',
-    description:
-      'Analyzed airline delay and cancellation patterns using dynamic scenario modeling to classify risk and surface route-level performance insights for data-driven decision support.',
-    tech: ['Tableau', 'Python', 'TabPy', 'Scenario Analysis', 'Risk Classification'],
-    category: 'Analytics',
-    featured: true,
-    color: 'from-yellow-500 to-amber-600',
-    year: '2024',
-    image: '/project-resum8.jpg',
-  },
-  {
-    id: 'text-classification-benchmark',
-    title: 'Text Classification Benchmark',
-    tagline: '20 Newsgroups Model Comparison',
-    description:
-      'Benchmarked multiple feature extraction strategies and classifier families on the 20 Newsgroups dataset to compare tradeoffs in accuracy, speed, and robustness.',
-    tech: ['Python', 'NLP', 'Feature Engineering', 'Model Benchmarking'],
-    category: 'AI',
-    featured: false,
-    color: 'from-fuchsia-500 to-purple-600',
-    year: '2024',
-    image: '/project-btcai.jpg',
-  },
-  {
-    id: 'canadian-credit-card-assistant',
-    title: 'Canadian Credit Card Assistant',
-    tagline: 'Rewards Optimization Assistant',
-    description:
-      'Built a React Native assistant that maps spending patterns to rewards strategy and supports AI-guided card recommendations for Canadian payment use cases.',
-    tech: ['React Native', 'AI Recommendations', 'Fintech UX', 'Optimization'],
-    category: 'Full Stack',
-    featured: false,
-    color: 'from-sky-500 to-blue-600',
-    year: '2025',
-    image: '/project-prepwise.jpg',
-  },
-  {
-    id: 'rumbledefi',
-    title: 'RumbleDeFi',
-    tagline: 'Web3 Wallet Experience',
-    description:
-      'Developed a wallet-connected Web3 interface with MetaMask integration and streamlined transaction UX for on-chain interactions.',
-    tech: ['React', 'Web3 UX', 'MetaMask', 'Wallet Connectivity'],
-    category: 'Blockchain',
-    featured: false,
-    color: 'from-pink-500 to-rose-600',
-    year: '2024',
-    image: '/project-uniswap.jpg',
-  },
-  {
-    id: 'exchange-trading-data-platforms',
-    title: 'Exchange / Trading Data Platform Concepts',
-    tagline: 'Spot + Futures Data Workflows',
-    description:
-      'Designed exchange API workflows across Coinbase/CCXT-style integrations for dashboards that track spot/futures signals and trading telemetry.',
-    tech: ['CCXT', 'Exchange APIs', 'Coinbase', 'Trading Dashboards'],
-    category: 'Platform',
-    featured: false,
-    color: 'from-indigo-500 to-blue-700',
-    year: '2025',
-    image: '/project-resum8.jpg',
-  },
-  {
-    id: 'edbucks',
-    title: 'EdBucks',
-    tagline: 'Product + Infrastructure Delivery',
-    description:
-      'Contributed to product and infrastructure components with AWS-backed environments and Jenkins-driven delivery workflows.',
-    tech: ['AWS', 'Jenkins', 'Product Infrastructure', 'CI/CD'],
-    category: 'Platform',
-    featured: false,
-    color: 'from-green-500 to-emerald-600',
-    year: '2023',
-    image: '/project-frostiyeti.jpg',
-  },
-  {
-    id: 'merc-rides',
-    title: 'Merc Rides',
-    tagline: 'Mobility Product Build',
-    description:
-      'Built core product components for a rides-focused platform with attention to reliability, usability, and iteration speed.',
-    tech: ['Full Stack', 'Product Development', 'Web Platform'],
-    category: 'Full Stack',
-    featured: false,
-    color: 'from-slate-500 to-gray-700',
-    year: '2023',
-    image: '/project-resum8.jpg',
-  },
-  {
-    id: 'blockchain-engineering-suite',
-    title: 'Blockchain / DEX / Smart Contract Engineering',
-    tagline: 'Protocol + Contract Experimentation',
-    description:
-      'Worked across BSC DEX flows, smart contract engineering, account abstraction ideas, ABI interactions, and swap-bot experimentation in Uniswap-style environments.',
-    tech: ['Smart Contracts', 'BSC DEX', 'ABI', 'Account Abstraction', 'Swap Bots'],
-    category: 'Blockchain',
-    featured: false,
-    color: 'from-violet-500 to-purple-700',
-    year: '2024',
-    image: '/project-uniswap.jpg',
-  },
-  {
-    id: 'aideation-yt',
-    title: 'Aideation-YT',
-    tagline: 'AI Content Ideation Workflow',
-    description:
-      'Created an AI-assisted ideation workflow for YouTube-style content planning and structured concept generation.',
-    tech: ['AI Workflow', 'Content Systems', 'Prompting'],
-    category: 'AI',
-    featured: false,
-    color: 'from-red-500 to-pink-600',
-    year: '2024',
-    image: '/project-prepwise.jpg',
-  },
-  {
-    id: 'urings',
-    title: 'Urings',
-    tagline: 'NFC Identity Ring Concept',
-    description:
-      'Explored an NFC-enabled ring concept that links physical interactions to digital portfolio and identity pages.',
-    tech: ['NFC', 'Identity UX', 'Hardware Concept'],
-    category: 'Full Stack',
-    featured: false,
-    color: 'from-cyan-500 to-teal-600',
-    year: '2024',
-    image: '/project-archetype.jpg',
-  },
-];
-
 export default function Work() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    async function loadData() {
+      const data = await getProjects();
+      setProjects(data);
+    }
+    loadData();
+  }, []);
 
   const featuredProjects = projects.filter((project) => project.featured);
   const additionalProjects = projects.filter((project) => !project.featured);
@@ -271,14 +68,14 @@ export default function Work() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                className="group relative bg-card border border-border rounded-3xl overflow-hidden hover:border-apple-blue/30 transition-all hover:shadow-soft-lg"
-                whileHover={{ y: -5 }}
-              >
+              <Link to={`/projects/${project.id}`} key={project.id}>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.08 }}
+                  className="group relative bg-card border border-border rounded-3xl overflow-hidden hover:border-apple-blue/30 transition-all hover:shadow-soft-lg h-full flex flex-col"
+                  whileHover={{ y: -5 }}
+                >
                 <div className="relative h-52 overflow-hidden">
                   <img
                     src={project.image}
@@ -317,30 +114,27 @@ export default function Work() {
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mt-auto pt-4">
                     {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs text-foreground hover:text-apple-blue transition-colors"
+                      <span
+                        onClick={(e) => { e.preventDefault(); window.open(project.liveUrl, '_blank'); }}
+                        className="inline-flex items-center gap-2 text-xs text-foreground hover:text-apple-blue transition-colors cursor-pointer z-10"
                       >
                         <ExternalLink className="w-3.5 h-3.5" /> Live
-                      </a>
+                      </span>
                     )}
                     {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs text-foreground hover:text-apple-blue transition-colors"
+                      <span
+                        onClick={(e) => { e.preventDefault(); window.open(project.githubUrl, '_blank'); }}
+                        className="inline-flex items-center gap-2 text-xs text-foreground hover:text-apple-blue transition-colors cursor-pointer z-10"
                       >
                         <Github className="w-3.5 h-3.5" /> Code
-                      </a>
+                      </span>
                     )}
                   </div>
                 </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -378,14 +172,14 @@ export default function Work() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredAdditionalProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.03 }}
-                className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-apple-blue/30 transition-all hover:-translate-y-1 hover:shadow-soft"
-              >
+              <Link to={`/projects/${project.id}`} key={project.id}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.03 }}
+                  className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-apple-blue/30 transition-all hover:-translate-y-1 hover:shadow-soft h-full flex flex-col"
+                >
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={project.image}
@@ -409,15 +203,16 @@ export default function Work() {
                     {project.title}
                   </h3>
                   <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{project.tagline}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tech.slice(0, 3).map((tech) => (
+                  <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                    {project.tech?.slice(0, 3).map((tech) => (
                       <span key={tech} className="px-2 py-0.5 text-[11px] rounded-full bg-secondary text-muted-foreground">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>

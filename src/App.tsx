@@ -10,8 +10,10 @@ import Work from './pages/Work';
 import Skills from './pages/Skills';
 import Hobbies from './pages/Hobbies';
 import ProjectDetail from './pages/ProjectDetail';
+import ExperienceDetail from './pages/ExperienceDetail';
 import About from './pages/About';
 import Resume from './pages/Resume';
+import Admin from './pages/Admin';
 import './App.css';
 
 function ScrollToTop() {
@@ -57,8 +59,10 @@ function AppContent() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/hobbies" element={<Hobbies />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/experience/:id" element={<ExperienceDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </AnimatePresence>
     </div>
