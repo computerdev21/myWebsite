@@ -4,25 +4,71 @@ import { Mail, MapPin, Send, Github, Linkedin, Twitter, Download, Code2, CheckCi
 
 const experiences = [
   {
+    role: 'Software Programmer – AI & Automation',
+    company: 'PowerCor Manufacturing / Linamar',
+    period: 'Sep 2025 – Present',
+    location: 'Ontario, Canada',
+    description:
+      'Owning production-facing software improvements across internal manufacturing platforms, dashboards, and operational workflow systems.',
+    highlights: [
+      'Delivered and refined real-time dashboards, admin tools, records pages, reminders, and training system workflows used in day-to-day plant operations.',
+      'Improved usability and data flow across internal applications to increase operational visibility and reduce friction in execution workflows.',
+      'Contributed to practical AI/automation initiatives for enterprise processes, including decision-memory and meeting-transcriber concepts for knowledge capture.',
+      'Collaborated closely with operations and technical stakeholders to debug issues, ship reliable updates, and support production continuity.',
+    ],
+    current: true,
+  },
+  {
+    role: 'ML Engineer (MLOps & GenAI Systems)',
+    company: 'NEVO Network',
+    period: 'Jun 2024 – Dec 2024',
+    location: 'Remote',
+    description:
+      'Built applied GenAI workflows and backend-integrated ML systems with a strong focus on experimentation quality and production readiness.',
+    highlights: [
+      'Developed GenAI-enabled workflows that connected model outputs with product features and user-facing functionality.',
+      'Integrated backend services and ML components to support reliable inference and system-level orchestration.',
+      'Iterated on prompt/model pipelines and evaluation loops to improve response quality, consistency, and practical utility.',
+      'Worked with a production mindset: instrumented behavior, handled integration edge cases, and optimized for maintainability.',
+    ],
+  },
+  {
     role: 'Full Stack Developer',
-    company: 'Everly AI',
-    period: '2025 - Present',
-    description: 'Building AI-powered solutions and contributing to innovative products.',
-    highlights: ['18+ commits', 'AI features', 'Production systems'],
+    company: 'FEOOH',
+    period: '2023 – 2024',
+    location: 'Mississauga, ON',
+    description:
+      'Built and maintained product-critical full stack modules spanning dashboards, APIs, and transactional flows.',
+    highlights: [
+      'Implemented dashboard and API-tracking views to improve monitoring and business-side visibility.',
+      'Integrated payment workflows and strengthened end-to-end transaction reliability across client-facing features.',
+      'Delivered product features using React.js, Laravel, Java, and Inertia.js in a cross-functional development setup.',
+    ],
   },
   {
-    role: 'Blockchain Developer',
-    company: 'Freelance',
-    period: '2023 - 2025',
-    description: 'Developed DeFi applications and smart contracts for various clients.',
-    highlights: ['5+ DApps deployed', 'Smart contracts', 'Web3 integration'],
+    role: 'Full Stack Developer',
+    company: 'PACTREON',
+    period: '2022 – 2023',
+    location: 'Delhi, India',
+    description:
+      'Focused on automation pipelines, platform integrations, and delivery acceleration through CI/CD modernization.',
+    highlights: [
+      'Automated recurring workflows to reduce manual tasks and improve operational throughput.',
+      'Integrated Omnisend-based notification pipelines to support reliable communication events and lifecycle updates.',
+      'Improved release processes using Jenkins, Docker, and Kubernetes for faster and more consistent deployments.',
+    ],
   },
   {
-    role: 'Software Developer',
-    company: 'Various Projects',
-    period: '2021 - 2023',
-    description: 'Built full-stack applications using modern technologies.',
-    highlights: ['15+ projects', 'React mastery', 'Automation tools'],
+    role: 'Web Developer',
+    company: 'The Startup Scholars',
+    period: 'Early Career',
+    location: 'Delhi, India',
+    description:
+      'Contributed to early-stage web product development and foundational engineering delivery.',
+    highlights: [
+      'Built and shipped foundational web features while strengthening practical product and implementation fundamentals.',
+      'Worked in fast-moving startup environments with direct feedback loops between product needs and engineering execution.',
+    ],
   },
 ];
 
@@ -58,7 +104,7 @@ export default function About() {
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-apple-blue/5 via-transparent to-apple-purple/5" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -68,22 +114,22 @@ export default function About() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm text-muted-foreground">Available for work</span>
+                <span className="text-sm text-muted-foreground">Building and shipping in production</span>
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Let's create something <span className="text-gradient">extraordinary</span>
+                Experience grounded in <span className="text-gradient">real systems</span>
               </h1>
-              
+
               <p className="text-lg text-muted-foreground mb-8">
-                I am a Full Stack Blockchain AI Developer with a passion for building innovative 
-                solutions. Whether it is a DeFi protocol, an AI-powered app, or a cutting-edge 
-                web experience, I am ready to bring your vision to life.
+                Full Stack Software Engineer and AI Engineer with hands-on ownership across architecture, implementation, debugging, deployment,
+                and product iteration. I build internal enterprise platforms, intelligent workflows, analytics systems, and user-facing apps across
+                manufacturing software, AI products, fintech, and blockchain environments.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <motion.a
-                  href="mailto:dev@example.com"
+                  href="mailto:devchetal@gmail.com"
                   className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-apple-blue to-apple-purple rounded-full"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -91,17 +137,17 @@ export default function About() {
                   <Mail className="w-4 h-4" />
                   Get in Touch
                 </motion.a>
-                <motion.button
+                <motion.a
+                  href="/Dev_Chetal_Resume.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-foreground bg-secondary rounded-full hover:bg-secondary/80 transition-colors"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <Download className="w-4 h-4" />
                   Download CV
-                </motion.button>
+                </motion.a>
               </div>
 
-              {/* Social Links */}
               <div className="flex gap-3">
                 {socials.map((social) => (
                   <motion.a
@@ -132,8 +178,7 @@ export default function About() {
                   className="w-full h-auto"
                 />
               </div>
-              
-              {/* Floating Badge */}
+
               <motion.div
                 className="absolute -bottom-4 -left-4 px-4 py-3 bg-card border border-border rounded-2xl shadow-soft"
                 initial={{ opacity: 0, y: 20 }}
@@ -156,41 +201,51 @@ export default function About() {
       </section>
 
       {/* Experience */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-secondary/30" id="experience">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-foreground mb-12">Experience</h2>
-            
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Experience</h2>
+            <p className="text-muted-foreground mb-12 max-w-3xl">
+              Production ownership across enterprise platforms, applied AI systems, and full stack product engineering.
+            </p>
+
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <motion.div
-                  key={exp.company}
+                  key={exp.company + exp.role}
                   className="relative pl-8 border-l-2 border-border"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.08 }}
                 >
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gradient-to-r from-apple-blue to-apple-purple" />
-                  
-                  <div className="bg-card border border-border rounded-2xl p-6">
-                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                  <div className={`absolute -left-[9px] top-0 w-4 h-4 rounded-full ${exp.current ? 'bg-gradient-to-r from-apple-blue to-apple-purple' : 'bg-muted-foreground/30'}`} />
+
+                  <div className={`bg-card border rounded-2xl p-6 ${exp.current ? 'border-apple-blue/30 shadow-soft' : 'border-border'}`}>
+                    <div className="flex flex-wrap items-center gap-3 mb-1">
                       <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                      <span className="text-apple-blue">@ {exp.company}</span>
+                      {exp.current && (
+                        <span className="px-3 py-1 text-xs rounded-full bg-apple-blue/10 text-apple-blue font-medium">Current</span>
+                      )}
+                    </div>
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      <span className="text-apple-blue font-medium">@ {exp.company}</span>
+                      <span className="text-sm text-muted-foreground">• {exp.location}</span>
                     </div>
                     <p className="text-sm text-muted-foreground mb-3">{exp.period}</p>
                     <p className="text-muted-foreground mb-4">{exp.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <ul className="space-y-2.5">
                       {exp.highlights.map((highlight) => (
-                        <span key={highlight} className="px-3 py-1 text-sm text-muted-foreground bg-secondary rounded-full">
-                          {highlight}
-                        </span>
+                        <li key={highlight} className="text-sm text-muted-foreground flex gap-2">
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-apple-purple shrink-0" />
+                          <span>{highlight}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </motion.div>
               ))}
@@ -210,8 +265,8 @@ export default function About() {
             >
               <h2 className="text-3xl font-bold text-foreground mb-6">Get in Touch</h2>
               <p className="text-muted-foreground mb-8">
-                Have a project in mind? Want to collaborate? Or just want to say hi? 
-                I would love to hear from you. Drop me a message and I will get back to you soon.
+                Open to software engineering, AI engineering, and product-driven platform roles. If you are building something meaningful,
+                I would love to connect.
               </p>
 
               <div className="space-y-6">
@@ -221,8 +276,8 @@ export default function About() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:dev@example.com" className="text-foreground hover:text-apple-blue transition-colors">
-                      dev@example.com
+                    <a href="mailto:devchetal@gmail.com" className="text-foreground hover:text-apple-blue transition-colors">
+                      devchetal@gmail.com
                     </a>
                   </div>
                 </div>
@@ -233,7 +288,7 @@ export default function About() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-foreground">Remote / Worldwide</p>
+                    <p className="text-foreground">Toronto, ON / Remote</p>
                   </div>
                 </div>
               </div>
