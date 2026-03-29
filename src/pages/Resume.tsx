@@ -355,6 +355,26 @@ export default function Resume() {
           </div>
         </motion.div>
 
+        {/* Embedded Resume Document */}
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="mt-12 bg-card border border-border rounded-3xl overflow-hidden shadow-soft-lg"
+        >
+          <div className="p-4 bg-secondary/30 border-b border-border">
+            <h3 className="text-xl font-bold text-foreground">Document View</h3>
+          </div>
+          <div className="w-full h-[800px] relative">
+            <iframe
+              src="https://docs.google.com/document/d/1qGYth1gVVuSVDo96j_wkId1XWXdLmLDgsz_OFec4Qzo/preview"
+              className="absolute inset-0 w-full h-full border-0"
+              title="Resume Document"
+              allowFullScreen
+            />
+          </div>
+        </motion.div>
+
         {/* Footer Note */}
         <motion.p
           initial={{ opacity: 0 }}

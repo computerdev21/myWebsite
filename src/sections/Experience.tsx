@@ -1,55 +1,20 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Briefcase, Calendar, MapPin, ArrowUpRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { getExperiences, type Experience } from '../lib/data';
 
-const experiences = [
-  {
-    id: 1,
-    role: 'Full Stack Developer',
-    company: 'Everly AI',
-    location: 'Remote',
-    period: '2025 - Present',
-    description:
-      'Building AI-powered solutions and contributing to innovative products. Working with modern tech stack including React, TypeScript, Python, and AI/ML technologies.',
-    highlights: [
-      '18+ commits to production codebase',
-      'Developed AI-powered features',
-      'Collaborated with cross-functional teams',
-    ],
-    current: true,
-  },
-  {
-    id: 2,
-    role: 'Blockchain Developer',
-    company: 'Freelance',
-    location: 'Remote',
-    period: '2023 - 2025',
-    description:
-      'Developed DeFi applications and smart contracts for various clients. Specialized in Ethereum, Avalanche, and Uniswap protocol integrations.',
-    highlights: [
-      'Deployed 5+ production DApps',
-      'Built smart contracts in Solidity',
-      'Integrated Web3 solutions for clients',
-    ],
-    current: false,
-  },
-  {
-    id: 3,
-    role: 'Software Developer',
-    company: 'Various Projects',
-    location: 'Remote',
-    period: '2021 - 2023',
-    description:
-      'Built full-stack applications using modern technologies. Worked on diverse projects ranging from web apps to automation tools.',
-    highlights: [
-      'Completed 15+ client projects',
-      'Mastered React, Node.js, and TypeScript',
-      'Developed automation solutions',
-    ],
-    current: false,
-  },
-];
+export default function ExperienceSection() {
+  const [experiences, setExperiences] = useState<Experience[]>([]);
 
-export default function Experience() {
+  useEffect(() => {
+    async function loadData() {
+      const data = await getExperiences();
+      setExperiences(data);
+    }
+    loadData();
+  }, []);
+
   return (
     <section id="experience" className="relative py-24 sm:py-32 bg-black">
       {/* Background */}
@@ -131,28 +96,32 @@ export default function Experience() {
                     index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
                   }`}
                 >
-                  <motion.div
-                    className="bg-card border border-white/10 rounded-3xl p-6 hover:border-white/20 transition-colors"
-                    whileHover={{ y: -5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-1">
-                          {exp.role}
-                        </h3>
-                        <div className="flex items-center gap-2 text-apple-blue">
-                          <Briefcase size={16} />
-                          <span className="font-medium">{exp.company}</span>
+                  <Link to={`/experience/${exp.id}`}>
+                    <motion.div
+                      className="group bg-card border border-white/10 rounded-3xl p-6 hover:border-apple-blue/30 transition-all"
+                      whileHover={{ y: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {/* Header */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-apple-blue transition-colors">
+                              {exp.role}
+                            </h3>
+                            <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-apple-blue transition-colors opacity-0 group-hover:opacity-100" />
+                          </div>
+                          <div className="flex items-center gap-2 text-apple-blue">
+                            <Briefcase size={16} />
+                            <span className="font-medium">{exp.company}</span>
+                          </div>
                         </div>
+                        {exp.current && (
+                          <span className="px-3 py-1 text-xs font-medium text-green-400 bg-green-400/10 rounded-full">
+                            Current
+                          </span>
+                        )}
                       </div>
-                      {exp.current && (
-                        <span className="px-3 py-1 text-xs font-medium text-green-400 bg-green-400/10 rounded-full">
-                          Current
-                        </span>
-                      )}
-                    </div>
 
                     {/* Meta */}
                     <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
@@ -171,7 +140,7 @@ export default function Experience() {
 
                     {/* Highlights */}
                     <ul className="space-y-2">
-                      {exp.highlights.map((highlight, i) => (
+                      {exp.highlights?.map((highlight, i) => (
                         <li
                           key={i}
                           className="flex items-center gap-2 text-sm text-gray-500"
@@ -181,7 +150,8 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
+                    </motion.div>
+                  </Link>
                 </div>
 
                 {/* Empty space for alternating layout */}
