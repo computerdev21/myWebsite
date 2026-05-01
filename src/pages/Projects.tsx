@@ -69,10 +69,10 @@ const projects = [
   {
     id: 'uniswap',
     title: 'UniSwap Swapper',
-    tagline: 'DeFi Trading Interface',
-    description: 'DeFi trading interface for Uniswap protocol with real-time price tracking and automated swapping.',
+    tagline: 'Automated V2 Trading Bot',
+    description: 'Developed an automated trading bot for Uniswap V2 that interacts with smart contracts via ABI, schedules transactions using node-cron, and tracks wallet states in SQLite.',
     image: '/project-uniswap.jpg',
-    tech: ['JavaScript', 'Ethereum', 'Web3.js', 'Uniswap SDK'],
+    tech: ['Node.js', 'Ethers.js', 'Uniswap V2 Core', 'SQLite3', 'node-cron'],
     category: 'Blockchain',
     stats: { volume: '$100K+', trades: '500+', status: 'Live' },
     featured: false,

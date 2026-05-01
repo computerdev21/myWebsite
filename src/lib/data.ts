@@ -208,16 +208,17 @@ let mockProjects: Project[] = [
     image: '/project-resum8.jpg'
   },
   {
-    id: 'blockchain-engineering-suite',
-    title: 'Blockchain / DEX / Smart Contract Engineering',
-    tagline: 'Protocol + Contract Experimentation',
-    description: 'Worked across BSC DEX flows, smart contract engineering, account abstraction ideas, ABI interactions, and swap-bot experimentation in Uniswap-style environments.',
-    tech: ['Smart Contracts', 'BSC DEX', 'ABI', 'Account Abstraction', 'Swap Bots'],
+    id: 'uniswap',
+    title: 'Uniswap V3 Swap Bot',
+    tagline: 'On-Chain Execution Infrastructure (Narfex)',
+    description: 'Built Uniswap V3 swap bot executing trades across EVM networks with <2s trigger latency. Implemented routing, approvals, and contract calls, reducing failed executions by ~40%.',
+    tech: ['EVM', 'Node.js', 'DeFi Tools', 'Smart Contracts'],
     category: 'Blockchain',
     featured: false,
     color: 'from-violet-500 to-purple-700',
-    year: '2024',
-    image: '/project-uniswap.jpg'
+    year: '2025',
+    image: '/project-uniswap.jpg',
+    githubUrl: 'https://github.com/computerdev21/UniSwapSwapper'
   },
   {
     id: 'aideation-yt',
@@ -252,45 +253,40 @@ let mockExperiences: Experience[] = [
     company: 'PowerCor Manufacturing – Linamar Corporation',
     location: 'Guelph, ON',
     period: 'September 2025 – Current',
-    description: 'Built backend and inference services for real-time manufacturing workflows, achieving sub-100ms latency in production. Created a whole OS for HR.',
-    longDescription: `At PowerCor Manufacturing, I led the development of robust backend systems targeting manufacturing efficiency.
-
-Notably, I created a comprehensive Operating System tailored specifically for HR management, streamlining onboarding, shift scheduling, and performance tracking.
-
-My work involved building inference services for real-time workflows and internal APIs that significantly improved system reliability and scalability. By optimizing pipelines and introducing controlled release strategies, I increased throughput by approximately 27%.`,
+    description: 'Architected real-time inference APIs processing 10K+ daily manufacturing events with sub-100ms P99 latency.',
+    longDescription: `At PowerCor Manufacturing, I led the development of robust backend systems targeting manufacturing efficiency. Architected real-time inference APIs processing 10K+ daily manufacturing events with sub-100ms P99 latency. Deployed zero-downtime ML workflows, reducing release failures by 40% and cutting rollback time to 90 seconds. Optimized compute batching strategies yielding 27% throughput gain while reducing infrastructure overhead by $15K monthly through efficient resource allocation.`,
     highlights: [
-      'Created a whole OS for HR',
-      'Achieved sub-100ms latency in production workflows',
-      'Improved system reliability and release consistency',
-      'Increased throughput by ~27% through batching and optimization'
+      'Architected real-time inference APIs processing 10K+ daily manufacturing events with sub-100ms P99 latency.',
+      'Deployed zero-downtime ML workflows, reducing release failures by 40% and cutting rollback time to 90 seconds.',
+      'Optimized compute batching strategies yielding 27% throughput gain while reducing infrastructure overhead by $15K monthly through efficient resource allocation'
     ],
     current: true
   },
   {
     id: 'nevo',
     role: 'ML Engineer (MLOps & GenAI Systems)',
-    company: 'NEVO NETWORK',
+    company: 'Nevo Network - Gha Fin Tech',
     location: 'Toronto, ON',
     period: 'June 2024 – December 2024',
-    description: 'Deployed LLM-based services with improved GPU memory efficiency and built Kubernetes-native inference platforms.',
+    description: 'Engineered Kubernetes-native LLM platform auto-scaling 50+ GPUs across 3 AZs to serve 500K+ weekly inferences.',
     highlights: [
-      'Deployed LLM-based services with improved GPU memory efficiency',
-      'Built Kubernetes-native inference platforms with CI/CD',
-      'Reduced release cycles by ~35% by automating deployments'
+      'Engineered Kubernetes-native LLM platform auto-scaling 50+ GPUs across 3 AZs to serve 500K+ weekly inferences',
+      'Constructed GitOps CI/CD automation enabling 20+ daily releases (previously 2 weekly) with automated canary rollbacks',
+      'Deployed memory-optimized inference pipelines improving GPU utilization by 60% and reducing latency by 45%'
     ],
     current: false
   },
   {
     id: 'feooh',
     role: 'Full Stack Developer (Data & Analytics)',
-    company: 'FEOOH',
+    company: 'Feooh',
     location: 'Mississauga, ON',
     period: 'August 2023 – April 2024',
-    description: 'Built internal dashboard tools and applied regression models to improve pricing strategy.',
+    description: 'Developed financial reporting platform tracking $2M+ monthly advertising spend with real-time general ledger-style transaction reconciliation and automated anomaly detection.',
     highlights: [
-      'Built internal dashboard tools supporting 20+ advertisement templates/day',
-      'Developed KPI and performance dashboards',
-      'Applied regression and forecasting models for pricing strategy'
+      'Developed financial reporting platform tracking $2M+ monthly advertising spend with real-time general ledger-style transaction reconciliation and automated anomaly detection',
+      'Developed analytics platform for 20+ daily ad templates, cutting campaign setup time by 65% for 15+ internal users.',
+      'Built regression-based pricing models improving campaign ROAS by 18% across 50+ active client accounts'
     ],
     current: false
   }

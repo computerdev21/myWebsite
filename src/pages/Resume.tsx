@@ -20,36 +20,72 @@ const itemVariants = {
 
 const experiences = [
   {
-    title: 'Full Stack Developer',
-    company: 'Freelance / Contract',
-    location: 'Toronto, ON / Remote',
-    period: '2021 - Present',
-    description: 'Working with clients worldwide to build full-stack applications, blockchain solutions, and AI-powered tools.',
+    title: 'Software Programmer – AI & Automation',
+    company: 'PowerCor Manufacturing – Linamar Corporation',
+    location: 'Guelph, ON',
+    period: 'September 2025 - Present',
+    description: 'Architected real-time inference APIs processing 10K+ daily manufacturing events with sub-100ms P99 latency.',
     achievements: [
-      'Developed 15+ production applications for clients across various industries',
-      'Built smart contracts handling significant transaction volume on Ethereum & Avalanche',
-      'Created AI-powered tools using OpenAI API and LangChain',
-      'Implemented CI/CD pipelines and cloud deployments',
+      'Architected real-time inference APIs processing 10K+ daily manufacturing events with sub-100ms P99 latency.',
+      'Deployed zero-downtime ML workflows, reducing release failures by 40% and cutting rollback time to 90 seconds.',
+      'Optimized compute batching strategies yielding 27% throughput gain while reducing infrastructure overhead by $15K monthly through efficient resource allocation'
+    ],
+  },
+  {
+    title: 'ML Engineer (MLOps & GenAI Systems)',
+    company: 'Nevo Network - Gha Fin Tech',
+    location: 'Toronto, ON',
+    period: 'June 2024 - December 2024',
+    description: 'Engineered Kubernetes-native LLM platform auto-scaling 50+ GPUs across 3 AZs to serve 500K+ weekly inferences',
+    achievements: [
+      'Engineered Kubernetes-native LLM platform auto-scaling 50+ GPUs across 3 AZs to serve 500K+ weekly inferences',
+      'Constructed GitOps CI/CD automation enabling 20+ daily releases (previously 2 weekly) with automated canary rollbacks',
+      'Deployed memory-optimized inference pipelines improving GPU utilization by 60% and reducing latency by 45%'
+    ],
+  },
+  {
+    title: 'Full Stack Developer (Data & Analytics)',
+    company: 'Feooh',
+    location: 'Mississauga, ON',
+    period: 'August 2023 - April 2024',
+    description: 'Developed financial reporting platform tracking $2M+ monthly advertising spend with real-time general ledger-style transaction reconciliation and automated anomaly detection',
+    achievements: [
+      'Developed financial reporting platform tracking $2M+ monthly advertising spend with real-time general ledger-style transaction reconciliation and automated anomaly detection',
+      'Developed analytics platform for 20+ daily ad templates, cutting campaign setup time by 65% for 15+ internal users.',
+      'Built regression-based pricing models improving campaign ROAS by 18% across 50+ active client accounts'
     ],
   },
 ];
 
 const education = [
   {
-    degree: 'Advanced Diploma in Computer Programming',
+    degree: 'Post Graduation in Applied AI Solutions Development',
     school: 'George Brown College',
     location: 'Toronto, ON',
-    period: '2019 - 2021',
-    description: 'Focused on software development, web technologies, and database management.',
+    period: 'January 2025 - December 2025',
+    description: 'Awards: Academic Excellence Award, Dean\'s Letter 2025',
+  },
+  {
+    degree: 'Post Graduation in Blockchain Development Program',
+    school: 'George Brown College',
+    location: 'Toronto, ON',
+    period: 'September 2023 - August 2024',
+    description: 'Awards: Dean\'s Letter 2024',
+  },
+  {
+    degree: 'Bachelor of Technology in Mechanical & Automation Engineering',
+    school: 'Indraprastha University(GGSIPU)',
+    location: 'Delhi, IN',
+    period: 'August 2018 - July 2022',
+    description: '',
   },
 ];
 
 const skills = {
-  'Frontend': ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
-  'Backend': ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Redis'],
-  'Blockchain': ['Solidity', 'Ethereum', 'Avalanche', 'Web3.js', 'Hardhat'],
-  'AI/ML': ['OpenAI API', 'LangChain', 'TensorFlow', 'Python', 'FastAPI'],
-  'DevOps': ['Docker', 'Kubernetes', 'AWS', 'CI/CD', 'GitHub Actions'],
+  'Languages': ['Go', 'TypeScript', 'Javascript', 'Python', 'SQL', 'Java'],
+  'Backend': ['FastAPI', 'Flask', 'Node.js', 'REST APIs', 'Microservices', 'DeFi Tooling'],
+  'Infra / Data': ['PostgreSQL', 'MySQL', 'Redis', 'AWS', 'Prometheus', 'Grafana', 'Azure', 'CI/CD', 'Kubernetes'],
+  'Blockchain': ['Smart Contracts', 'EVM', 'BitGo API', 'Wallet Infrastructure', 'Trading Systems'],
 };
 
 const certifications = [
@@ -68,9 +104,9 @@ const projects = [
     description: 'AI-powered career preparation platform with personalized coaching and interview practice.',
   },
   {
-    name: 'Archetype',
-    tech: 'TypeScript, Vite, Tailwind',
-    description: 'Modern web application template with best practices and pre-configured components.',
+    name: 'Archetype – AI Crypto Strategy Agent (3rd Place, BitGo Hackathon)',
+    tech: 'BitGo APIs, LLM, Wallet Infrastructure',
+    description: 'Engineered wallet-aware AI strategist integrating BitGo APIs, generating personalized allocations from 4-prompt profiling. Architected constrained LLM chat system with real-time risk analysis.',
   },
   {
     name: 'Resumode',
@@ -93,9 +129,9 @@ const projects = [
     description: 'Bitcoin price prediction and analysis tool using machine learning.',
   },
   {
-    name: 'Uniswap Swapper',
-    tech: 'JavaScript, Ethereum, Web3.js',
-    description: 'DeFi trading interface for Uniswap protocol with real-time price tracking.',
+    name: 'Uniswap V3 Swap Bot – On-Chain Execution Infrastructure (Narfex)',
+    tech: 'EVM, DeFi, Node.js',
+    description: 'Built Uniswap V3 swap bot executing trades across EVM networks with <2s trigger latency. Implemented routing, approvals, and contract calls, reducing failed executions by ~40%.',
   },
   {
     name: 'EDBucks',
