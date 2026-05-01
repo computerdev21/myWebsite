@@ -45,9 +45,9 @@ const projects = [
     id: 4,
     title: 'UniSwap Swapper',
     description:
-      'DeFi trading interface for Uniswap protocol with real-time price tracking and automated swapping. Features slippage protection and gas optimization.',
+      'Developed an automated trading bot for Uniswap V2 that interacts with smart contracts via ABI, schedules transactions using node-cron, and tracks wallet states in SQLite.',
     image: '/project-uniswap.jpg',
-    tech: ['JavaScript', 'Ethereum', 'Web3.js', 'Uniswap SDK'],
+    tech: ['Node.js', 'Ethers.js', 'Uniswap V2 Core', 'SQLite3', 'node-cron'],
     category: 'Blockchain',
     liveUrl: '#',
     githubUrl: 'https://github.com/computerdev21/UniSwapSwapper',
