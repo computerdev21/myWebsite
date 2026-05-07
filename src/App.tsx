@@ -13,6 +13,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import ExperienceDetail from './pages/ExperienceDetail';
 import About from './pages/About';
 import Resume from './pages/Resume';
+import Blog from './pages/Blog';
 import Admin from './pages/Admin';
 import './App.css';
 
@@ -62,6 +63,7 @@ function AppContent() {
           <Route path="/experience/:id" element={<ExperienceDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </AnimatePresence>
