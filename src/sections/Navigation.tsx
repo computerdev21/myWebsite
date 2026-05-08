@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Moon, Sparkles, Code2, Briefcase, Layers, Heart, User } from 'lucide-react';
+import { Menu, X, Sun, Moon, Sparkles, Code2, Briefcase, Layers, Heart, User, BookOpen } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const navLinks = [
@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Projects', href: '/work', icon: Briefcase },
   { name: 'Skills', href: '/skills', icon: Layers },
   { name: 'Hobbies', href: '/hobbies', icon: Heart },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'Resume', href: '/resume', icon: null },
   { name: 'About', href: '/about', icon: User },
 ];
