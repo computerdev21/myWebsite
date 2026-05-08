@@ -14,6 +14,7 @@ import ExperienceDetail from './pages/ExperienceDetail';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Blog from './pages/Blog';
+import AgenticAIPost from './pages/AgenticAIPost';
 import Admin from './pages/Admin';
 import './App.css';
 
@@ -64,6 +65,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/agentic-ai" element={<AgenticAIPost />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </AnimatePresence>
