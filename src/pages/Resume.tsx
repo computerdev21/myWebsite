@@ -24,9 +24,9 @@ const experiences = [
     company: 'PowerCor Manufacturing – Linamar Corporation',
     location: 'Guelph, ON',
     period: 'September 2025 - Present',
-    description: 'Architected real-time inference APIs processing 10K+ daily manufacturing events with sub-100ms P99 latency.',
+    description: 'Architected custom middleware for request batching and stream processing, enabling real-time inference APIs to handle 10K+ daily events with sub-100ms P99 latency.',
     achievements: [
-      'Architected real-time inference APIs processing 10K+ daily manufacturing events with sub-100ms P99 latency.',
+      'Architected custom middleware for request batching and stream processing, enabling real-time inference APIs to handle 10K+ daily manufacturing events with sub-100ms P99 latency.',
       'Deployed zero-downtime ML workflows, reducing release failures by 40% and cutting rollback time to 90 seconds.',
       'Optimized compute batching strategies yielding 27% throughput gain while reducing infrastructure overhead by $15K monthly through efficient resource allocation'
     ],
@@ -36,9 +36,9 @@ const experiences = [
     company: 'Nevo Network - Gha Fin Tech',
     location: 'Toronto, ON',
     period: 'June 2024 - December 2024',
-    description: 'Engineered Kubernetes-native LLM platform auto-scaling 50+ GPUs across 3 AZs to serve 500K+ weekly inferences',
+    description: 'Developed Kubernetes-native load-balancing middleware to route LLM requests and optimize GPU memory allocation across 3 AZs, serving 500K+ weekly inferences.',
     achievements: [
-      'Engineered Kubernetes-native LLM platform auto-scaling 50+ GPUs across 3 AZs to serve 500K+ weekly inferences',
+      'Developed Kubernetes-native load-balancing middleware to route LLM requests and optimize GPU memory allocation across 3 AZs, serving 500K+ weekly inferences.',
       'Constructed GitOps CI/CD automation enabling 20+ daily releases (previously 2 weekly) with automated canary rollbacks',
       'Deployed memory-optimized inference pipelines improving GPU utilization by 60% and reducing latency by 45%'
     ],
@@ -48,9 +48,9 @@ const experiences = [
     company: 'Feooh',
     location: 'Mississauga, ON',
     period: 'August 2023 - April 2024',
-    description: 'Developed financial reporting platform tracking $2M+ monthly advertising spend with real-time general ledger-style transaction reconciliation and automated anomaly detection',
+    description: 'Implemented data aggregation middleware to connect and normalize fragmented ad-network APIs into a centralized, real-time general ledger.',
     achievements: [
-      'Developed financial reporting platform tracking $2M+ monthly advertising spend with real-time general ledger-style transaction reconciliation and automated anomaly detection',
+      'Implemented data aggregation middleware to connect and normalize fragmented ad-network APIs into a centralized, real-time general ledger for transaction reconciliation.',
       'Developed analytics platform for 20+ daily ad templates, cutting campaign setup time by 65% for 15+ internal users.',
       'Built regression-based pricing models improving campaign ROAS by 18% across 50+ active client accounts'
     ],
@@ -106,7 +106,7 @@ const projects = [
   {
     name: 'Archetype – AI Crypto Strategy Agent (3rd Place, BitGo Hackathon)',
     tech: 'BitGo APIs, LLM, Wallet Infrastructure',
-    description: 'Engineered wallet-aware AI strategist integrating BitGo APIs, generating personalized allocations from 4-prompt profiling. Architected constrained LLM chat system with real-time risk analysis.',
+    description: 'Engineered orchestration middleware that safely maps unconstrained LLM outputs to constrained BitGo API execution calls, enabling secure, wallet-aware AI strategies.',
   },
   {
     name: 'Resumode',
@@ -131,7 +131,7 @@ const projects = [
   {
     name: 'Uniswap V3 Swap Bot – On-Chain Execution Infrastructure (Narfex)',
     tech: 'EVM, DeFi, Node.js',
-    description: 'Built Uniswap V3 swap bot executing trades across EVM networks with <2s trigger latency. Implemented routing, approvals, and contract calls, reducing failed executions by ~40%.',
+    description: 'Built transaction-routing middleware that intercepts, validates, and simulates trades before dispatching them across EVM networks, achieving <2s trigger latency and reducing failed executions by ~40%.',
   },
   {
     name: 'EDBucks',
