@@ -15,6 +15,7 @@ import About from './pages/About';
 import Resume from './pages/Resume';
 import Blog from './pages/Blog';
 import Admin from './pages/Admin';
+import ZipUpload from './pages/ZipUpload';
 import './App.css';
 
 function ScrollToTop() {
@@ -64,6 +65,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/zip-upload" element={<ZipUpload />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </AnimatePresence>
