@@ -1,20 +1,42 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { AlertCircle, CheckCircle2, FileText, Github, UploadCloud } from 'lucide-react';
+import { AlertCircle, CheckCircle2, FileArchive, Github, UploadCloud } from 'lucide-react';
 
 type UploadStatus = 'idle' | 'uploading' | 'success' | 'error';
+type SupportedExtension = 'pdf' | 'zip';
 
 const REPOSITORY = 'computerdev21/myWebsite';
 const DEFAULT_BRANCH = 'main';
-const UPLOAD_DIRECTORY = 'uploads/pdfs';
 const MAX_FILE_SIZE_BYTES = 100 * 1024 * 1024;
+
+function getSupportedExtension(file: File | null): SupportedExtension | null {
+  if (!file) return null;
+
+  const lowerName = file.name.toLowerCase();
+
+  if (file.type === 'application/pdf' || lowerName.endsWith('.pdf')) return 'pdf';
+  if (
+    file.type === 'application/zip' ||
+    file.type === 'application/x-zip-compressed' ||
+    lowerName.endsWith('.zip')
+  ) {
+    return 'zip';
+  }
+
+  return null;
+}
+
+function getUploadDirectory(extension: SupportedExtension | null) {
+  if (extension === 'zip') return 'uploads/zips';
+  return 'uploads/pdfs';
+}
 
 function sanitizeFileName(fileName: string) {
   return fileName
-    .replace(/\.pdf$/i, '')
+    .replace(/\.(pdf|zip)$/i, '')
     .toLowerCase()
     .replace(/[^a-z0-9-_]+/g, '-')
-    .replace(/^-+|-+$/g, '') || 'document';
+    .replace(/^-+|-+$/g, '') || 'upload';
 }
 
 function arrayBufferToBase64(buffer: ArrayBuffer) {
@@ -38,11 +60,16 @@ export default function ZipUpload() {
   const [message, setMessage] = useState('');
   const [uploadedUrl, setUploadedUrl] = useState('');
 
+  const selectedExtension = getSupportedExtension(selectedFile);
+
   const targetPath = useMemo(() => {
-    if (!selectedFile) return `${UPLOAD_DIRECTORY}/your-document.pdf`;
+    const extension = getSupportedExtension(selectedFile);
+    const uploadDirectory = getUploadDirectory(extension);
+
+    if (!selectedFile || !extension) return `${uploadDirectory}/your-file.pdf-or.zip`;
 
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    return `${UPLOAD_DIRECTORY}/${timestamp}-${sanitizeFileName(selectedFile.name)}.pdf`;
+    return `${uploadDirectory}/${timestamp}-${sanitizeFileName(selectedFile.name)}.${extension}`;
   }, [selectedFile]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,19 +85,21 @@ export default function ZipUpload() {
 
     if (!selectedFile) {
       setStatus('error');
-      setMessage('Please choose a PDF file first.');
+      setMessage('Please choose a PDF or ZIP file first.');
       return;
     }
 
-    if (selectedFile.type !== 'application/pdf' && !selectedFile.name.toLowerCase().endsWith('.pdf')) {
+    const extension = getSupportedExtension(selectedFile);
+
+    if (!extension) {
       setStatus('error');
-      setMessage('Only PDF files are supported for this upload flow.');
+      setMessage('Only PDF and ZIP files are supported for this upload flow.');
       return;
     }
 
     if (selectedFile.size > MAX_FILE_SIZE_BYTES) {
       setStatus('error');
-      setMessage('GitHub blocks files over 100 MB. Pick a smaller PDF or use approved enterprise storage for larger files.');
+      setMessage('GitHub blocks files over 100 MB. Pick a smaller file or use approved enterprise storage for larger files.');
       return;
     }
 
@@ -81,7 +110,7 @@ export default function ZipUpload() {
     }
 
     setStatus('uploading');
-    setMessage('Uploading PDF to GitHub...');
+    setMessage(`Uploading ${extension.toUpperCase()} to GitHub...`);
     setUploadedUrl('');
 
     try {
@@ -108,7 +137,7 @@ export default function ZipUpload() {
       }
 
       setStatus('success');
-      setMessage('Upload complete. The PDF is now committed to GitHub.');
+      setMessage(`Upload complete. The ${extension.toUpperCase()} is now committed to GitHub.`);
       setUploadedUrl(data?.content?.html_url || `https://github.com/${REPOSITORY}/blob/${branch}/${targetPath}`);
       setSelectedFile(null);
     } catch (error) {
@@ -129,41 +158,44 @@ export default function ZipUpload() {
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
           <section className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-apple-blue/10 text-apple-blue border border-apple-blue/20">
-              <FileText className="w-4 h-4" />
-              <span className="text-sm font-medium">GitHub PDF Intake</span>
+              <FileArchive className="w-4 h-4" />
+              <span className="text-sm font-medium">GitHub File Intake</span>
             </div>
 
             <div>
               <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-                Upload approved PDFs straight into your repo.
+                Upload approved PDFs and ZIPs straight into your repo.
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Pick a PDF, paste a temporary GitHub token, and this page commits it to
+                Pick a PDF or ZIP, paste a temporary GitHub token, and this page commits it to
                 <span className="text-foreground font-medium"> {REPOSITORY}</span> under
-                <span className="text-foreground font-medium"> {UPLOAD_DIRECTORY}</span>.
+                <span className="text-foreground font-medium"> uploads/pdfs</span> or
+                <span className="text-foreground font-medium"> uploads/zips</span>.
               </p>
             </div>
 
             <form onSubmit={handleUpload} className="bg-card border border-border rounded-3xl p-6 sm:p-8 shadow-soft space-y-6">
               <label className="block">
-                <span className="text-sm font-medium text-muted-foreground">PDF file</span>
+                <span className="text-sm font-medium text-muted-foreground">PDF or ZIP file</span>
                 <div className="mt-2 border-2 border-dashed border-border rounded-2xl p-8 text-center bg-background/50 hover:border-apple-blue/50 transition-colors">
                   <input
                     type="file"
-                    accept=".pdf,application/pdf"
+                    accept=".pdf,.zip,application/pdf,application/zip,application/x-zip-compressed"
                     onChange={handleFileChange}
                     className="sr-only"
-                    id="pdf-upload-input"
+                    id="file-upload-input"
                   />
-                  <label htmlFor="pdf-upload-input" className="cursor-pointer flex flex-col items-center gap-3">
+                  <label htmlFor="file-upload-input" className="cursor-pointer flex flex-col items-center gap-3">
                     <div className="w-14 h-14 rounded-2xl bg-apple-blue/10 flex items-center justify-center text-apple-blue">
                       <UploadCloud className="w-7 h-7" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">
-                        {selectedFile ? selectedFile.name : 'Click to choose a PDF file'}
+                        {selectedFile ? selectedFile.name : 'Click to choose a PDF or ZIP file'}
                       </p>
-                      <p className="text-sm text-muted-foreground mt-1">Maximum file size: 100 MB</p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Maximum file size: 100 MB{selectedExtension ? ` • Detected: ${selectedExtension.toUpperCase()}` : ''}
+                      </p>
                     </div>
                   </label>
                 </div>
@@ -226,7 +258,7 @@ export default function ZipUpload() {
                 className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-apple-blue to-apple-purple text-white font-medium disabled:opacity-60 disabled:cursor-not-allowed btn-glow"
               >
                 <Github className="w-5 h-5" />
-                {status === 'uploading' ? 'Uploading...' : 'Upload PDF to GitHub'}
+                {status === 'uploading' ? 'Uploading...' : 'Upload file to GitHub'}
               </button>
             </form>
           </section>
@@ -238,10 +270,10 @@ export default function ZipUpload() {
                 This is a frontend-only MVP. The token stays in the browser session and is sent directly to GitHub's Contents API.
               </p>
               <p>
-                For production, move this behind a backend or serverless function with authentication, rate limits, file scanning, and storage rules.
+                PDFs are saved under uploads/pdfs. ZIPs are saved under uploads/zips. Simple routing, clean file ops — no spreadsheet energy.
               </p>
               <p>
-                GitHub repositories are okay for small approved documents, but large or sensitive files should use the storage path approved by your organization.
+                For production, move this behind a backend or serverless function with authentication, rate limits, file scanning, and storage rules.
               </p>
             </div>
           </aside>
